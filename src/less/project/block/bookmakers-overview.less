@@ -1,0 +1,204 @@
+.mt-bookmakers-overview {
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  &__item {
+    width: calc(100% / 3 - (40px / 3));
+    box-shadow: 0px 2px 4px 0px rgba(29, 29, 29, 0.15);
+    & h3 {
+      padding: 15px;
+      background-color: #25373e;
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: @FW-Bold;
+    }
+  }
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: #FFFFFF;
+    &_total {
+      max-width: 180px;
+      width: 100%;
+      border-right: 1px solid @C-border;
+      padding: 25px 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: @C-blue;
+      font-size: 70px;
+      font-weight: @FW-Bold;
+      line-height: 0.9;
+    }
+    &_detail {
+      flex: 1 1 auto;
+      padding: 25px 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &_stars {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      &--img {
+        background-image: url(../img/star-yellow-sprite.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 25px;
+        height: 26px;
+        overflow: hidden;
+        background-position: 0;
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+      }
+      &--01 {
+        background-position-x: -32px;
+      }
+      &--02 {
+        background-position-x: -64px;
+      }
+      &--03 {
+        background-position-x: -96px;
+      }
+      &--04 {
+        background-position-x: -128px;
+      }
+      &--05 {
+        background-position-x: -160px;
+      }
+      &--06 {
+        background-position-x: -192px;
+      }
+      &--07 {
+        background-position-x: -224px;
+      }
+      &--08 {
+        background-position-x: -256px;
+      }
+      &--09 {
+        background-position-x: -288px;
+      }
+      &--full {
+        background-position-x: -320px;
+      }
+    }
+    &_info {
+      color: @C-textblack;
+      font-size: 15px;
+      font-weight: @FW-SemiBold;
+      margin-bottom: 15px;
+    }
+    &_link {
+      max-width: 115px;
+      width: 100%;
+      & .mt-btn {
+        width: 100%;
+      }
+    }
+  }
+  &__advantages {
+    display: flex;
+    flex-direction: column;
+    &_desc {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 25px 20px;
+      background-color: #FFFFFF;
+      flex: 1 1 auto;
+      & li {
+        width: 100%;
+        text-align: left;
+        position: relative;
+        padding-left: 16px;
+        color: @C-textblack;
+        font-size: 15px;
+        line-height: 1.6;
+        font-weight: @FW-Medium;
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 11px;
+          width: 10px;
+          height: 1px;
+          background-color: @C-blue;
+        }
+      }
+    }
+  }
+  &__bonuses {
+    display: flex;
+    flex-direction: column;
+    &_desc {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      background-color: #FFFFFF;
+      padding: 25px 20px;
+      flex: 1 1 auto;
+    }
+    &_logo {
+      max-width: 130px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      & div {
+        flex: 0 0 95px;
+        width: 95px;
+        height: 95px;
+        border-radius: 50%;
+        background-color: @C-blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 60px;
+      }
+    }
+    &_detail {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      ul {
+        margin-bottom: 15px;
+        & li {
+          width: 100%;
+          text-align: left;
+          position: relative;
+          padding-left: 16px;
+          color: @C-blue;
+          font-size: 15px;
+          line-height: 1.6;
+          font-weight: @FW-SemiBold;
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 11px;
+            width: 10px;
+            height: 1px;
+            background-color: @C-blue;
+          }
+        }
+      }
+    }
+    &_link {
+      max-width: 115px;
+      width: 100%;
+      & .mt-btn {
+        width: 100%;
+      }
+    }
+  }
+}

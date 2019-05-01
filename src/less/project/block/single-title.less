@@ -1,0 +1,53 @@
+.mt-single-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #064147;
+  padding: 15px 20px;
+  &__logo {
+    flex: 0 0 205px;
+    padding-right: 10px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__info {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    & li {
+      font-weight: @FW-Bold;
+      color: #f4f4f4;
+      font-size: 16px;
+      position: relative;
+      padding-left: 16px;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 10px;
+        height: 1px;
+        background-color: #FFFFFF;
+      }
+    }
+  }
+  &__link {
+    flex: 0 0 135px;
+    margin-left: 40px;
+    & .mt-btn {
+      width: 100%;
+    }
+  }
+}

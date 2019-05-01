@@ -1,0 +1,136 @@
+.mt-bookmakers-table {
+  &__item {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    display: table;
+    width: 100%;
+    &:nth-child(4n + 1) {
+      background: #064147;
+    }
+    &:nth-child(4n + 2) {
+      background: #232f3f;
+    }
+    &:nth-child(4n + 3) {
+      background: #363636;
+    }
+    &:nth-child(4n + 4) {
+      background: #213671;
+    }
+  }
+  &__left {
+    display: table-cell;
+    width: 100%;
+    vertical-align: top;
+  }
+  &__right {
+    width: 110px;
+    vertical-align: top;
+    text-align: right;
+    & .mt-bookmakers-table__link {
+      & .mt-btn {
+        width: 100%;
+      }
+      &:nth-child(1) {
+        margin-bottom: 10px;
+      }
+      &:nth-child(2) {
+        & .mt-btn {
+          padding: 15px 13px;
+        }
+      }
+    }
+  }
+  &__info {
+    width: 100%;
+    display: table;
+    margin-bottom: 5px;
+  }
+  &__logo {
+    width: 100px;
+    & img {
+      vertical-align: middle;
+    }
+  }
+  &__rating {
+    display: table-cell;
+    width: 100%;
+    text-align: left;
+    vertical-align: middle;
+    padding: 0 5px;
+  }
+  &__stars {
+    &--img {
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100px;
+      height: 17px;
+      overflow: hidden;
+      background-position-x: 0;
+      display: inline-block;
+      & img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+      }
+    }
+    &--0 {
+      background-image: url(../img/star-yellow-0.png);
+    }
+    &--0-5 {
+      background-image: url(../img/star-yellow-0-5.png);
+    }
+    &--1 {
+      background-image: url(../img/star-yellow-1.png);
+    }
+    &--1-5 {
+      background-image: url(../img/star-yellow-1-5.png);
+    }
+    &--2 {
+      background-image: url(../img/star-yellow-2.png);
+    }
+    &--2-5 {
+      background-image: url(../img/star-yellow-2-5.png);
+    }
+    &--3 {
+      background-image: url(../img/star-yellow-3.png);
+    }
+    &--3-5 {
+      background-image: url(../img/star-yellow-3-5.png);
+    }
+    &--4 {
+      background-image: url(../img/star-yellow-4.png);
+    }
+    &--4-5 {
+      background-image: url(../img/star-yellow-4-5.png);
+    }
+    &--5 {
+      background-image: url(../img/star-yellow-5.png);
+    }
+  }
+  &__desc {
+    padding: 0 10px;
+    width: 100%;
+    & li {
+      width: 100%;
+      position: relative;
+      font-size: 13px;
+      color: #ffffff;
+      font-weight: @FW-Bold;
+      padding-left: 16px;
+      letter-spacing: -0.5px;
+      margin-bottom: 7px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 10px;
+        height: 1px;
+        background-color: #ffffff;
+      }
+    }
+  }
+}

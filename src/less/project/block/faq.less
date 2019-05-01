@@ -1,0 +1,56 @@
+.mt-faq {
+  margin-bottom: -20px;
+  &__title {
+    background-color: #ffffff;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: @FW-SemiBold;
+    color: @C-textblack;
+    padding: 25px 40px 20px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: .3s;
+    &::before {
+      content: '';
+      position: absolute;
+      right: 20px;
+      top: -2px;
+      bottom: 0;
+      margin: auto;
+      width: 8px;
+      height: 8px;
+      border-bottom: 1px solid @C-blue;
+      border-right: 1px solid @C-blue;
+      transform: rotate(45deg);
+      transition: .3s;
+    }
+    &:hover {
+      color: @C-blue;
+    }
+    &--active {
+      color: @C-blue;
+      &::before {
+        top: 8px;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+  &__drop {
+    margin-top: -20px;
+    background-color: #ffffff;
+    padding: 0 20px 25px 20px;
+    display: none;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  &__text {
+    font-size: 15px;
+    font-weight: @FW-Reg;
+    line-height: 1.6;
+    color: @C-textblack;
+  }
+}

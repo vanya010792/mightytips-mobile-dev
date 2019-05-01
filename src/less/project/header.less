@@ -1,0 +1,210 @@
+.mt-head {
+  background-color: #000000;
+  padding-top: 10px;
+  &__wrap {
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__logo {
+    max-width: 118px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: .3s;
+    z-index: 101;
+    &:hover {
+      filter: grayscale(80%);
+    }
+  }
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+    &_wrap {
+      flex: 1 1 auto;
+      height: 100%;
+      z-index: 100;
+    }
+  }
+  &__search {
+    flex: 0 0 23px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+    padding-bottom: 12px;
+    & a {
+      display: block;
+      padding: 5px 0 5px 7px;
+      & img {
+        max-width: 16px;
+        max-height: 18px;
+        &:first-child {
+          display: inline-block;
+        }
+        &:last-child {
+          display: none;
+        }
+      }
+      &:hover {
+        opacity: .65;
+      }
+    }
+  }
+  &__toggle {
+    display: none;
+  }
+  &__nav {
+    &_wrapper {
+      flex: 1 1 auto;
+      height: 100%;
+      position: relative;
+    }
+    &_wrap {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    &_list {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      height: 100%;
+      &>*:not(:first-child) {
+        margin-left: 22px;
+      }
+    }
+    &_item {
+      position: relative;
+      &>a {
+        font-size: @S-13;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        line-height: 1;
+        padding: 23px 2px 18px 2px;
+        border-bottom: 3px solid transparent;
+        text-align: center;
+        z-index: 1;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & span {
+          margin-left: 5px;
+          width: 0;
+          height: 0;
+          border: 4px solid transparent;
+          border-top-style: solid;
+          border-top-color: #FFFFFF;
+          border-top-width: 4px;
+          transition: .3s;
+        }
+      }
+      &--active {
+        &>a {
+          border-bottom: 3px solid @C-blue;
+          color: @C-blue;
+          cursor: default;
+          & span {
+            border-top-color: @C-blue;
+          }
+        }
+      }
+    }
+    &_dropdown {
+      display: none;
+      perspective: 100px;
+      min-width: 240px;
+      position: absolute;
+      top: 100%;
+      left: -10px;
+      background-color: @C-gray;
+      z-index: 100;
+      padding: 10px 0 20px 0;
+      transition: .3s;
+      &__item {
+        border-left: 4px solid transparent;
+        transition: .3s;
+        & a {
+          font-size: 12px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 5px 18px 5px 10px;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          line-height: 1;
+          &:hover {
+            transform: translateX(10px);
+          }
+          & span {
+            flex: 0 0 10px;
+            height: 10px;
+            border: 2px solid transparent;
+            border-right: 2px solid #FFFFFF;
+            border-bottom: 2px solid #FFFFFF;
+            font-size: 0;
+            transform: rotate(-45deg);
+          }
+        }
+        &--active {
+          border-left: 4px solid @C-blue;
+          & a {
+            transform: translateX(10px);
+            cursor: default;
+            pointer-events: none;
+            color: @C-blue;
+          }
+        }
+      }
+    }
+  }
+  &__panel {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    align-items: flex-end;
+    padding-bottom: 12px;
+    &_user {
+      display: flex;
+      align-items: center;
+      border-right: 1px solid #4b4b4b;
+      padding-right: 13px;
+      & a {
+        font-size: @S-13;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        line-height: 1;
+        padding: 7px;
+        border-bottom: 3px solid transparent;
+        text-align: center;
+        z-index: 1;
+        &:hover {
+          color: @C-blue;
+        }
+      }
+    }
+    &_social {
+      padding-left: 13px;
+      display: flex;
+      align-items: center;
+      & a {
+        padding: 5px 7px;
+        & img {
+          max-width: 16px;
+          max-height: 18px;
+        }
+        &:hover {
+          opacity: .65;
+        }
+      }
+    }
+  }
+}
+

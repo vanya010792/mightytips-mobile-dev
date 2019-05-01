@@ -1,0 +1,107 @@
+.mt-single-article {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 4px 0px rgba(29, 29, 29, 0.15);
+    margin-bottom: 20px;
+    transition: .3s;
+    &:hover {
+      background-color: @C-gray;
+      & .mt-single-article__title {
+        color: @C-white;
+      }
+      & .mt-single-article__date {
+        color: @C-white;
+      }
+      & .mt-single-article__text {
+        color: @C-white;
+      }
+      & .mt-single-article__likes a {
+        color: @C-white;
+      }
+    }
+  }
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 220px;
+    padding-right: 20px;
+  }
+  &__desc {
+    flex: 1 1 auto;
+  }
+  &__title {
+    font-weight: @FW-SemiBold;
+    font-size: 16px;
+    line-height: 1.3;
+    color: @C-textblack;
+    margin-bottom: 5px;
+    transition: .3s;
+  }
+  &__date {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+    color: @C-grey;
+    font-weight: @FW-Medium;
+    line-height: 1.7;
+    margin-bottom: 7px;
+    transition: .3s;
+    & p {
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+      & img {
+        width: 12px;
+        height: 12px;
+        margin-right: 4px;
+      }
+    }
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 1.55;
+    color: @C-textblack;
+    font-weight: @FW-Medium;
+    margin-bottom: 7px;
+    transition: .3s;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__likes {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    & a {
+      font-size: 13px;
+      font-weight: @FW-Medium;
+      color: @C-textblack;
+      transition: .3s;
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+      &:first-child img {
+        vertical-align: baseline;
+      }
+      &:last-child img {
+        margin-bottom: -5px;
+      }
+      & img {
+        margin-right: 3px;
+        max-width: 14px;
+        max-height: 16px;
+      }
+      &:hover {
+        opacity: .65;
+      }
+    }
+  }
+}

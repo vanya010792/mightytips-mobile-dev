@@ -1,0 +1,120 @@
+.mt-tips {
+  background-color: @C-gray2;
+  padding: 20px 10px 15px 10px;
+  &--white {
+    background-color: transparent;
+    padding: 0;
+  }
+  &__list {
+    margin: 0 -5px;
+  }
+  &__item {
+    height: 100%;
+    &_wrap {
+      display: inline-block;
+      width: 50%;
+      padding: 0 5px;
+      margin-bottom: 10px;
+    }
+    &--white {
+      background-color: #ffffff;
+      box-shadow: 0px 2px 4px 0px rgba(29, 29, 29, 0.15);
+    }
+  }
+  &__img {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    & .mt-btn {
+      position: absolute;
+      letter-spacing: normal;
+      top: 50%;
+      left: 50%;
+      margin-top: -20px;
+      margin-left: -65px;
+    }
+    & img {
+      width: 100%;
+    }
+    &:hover {
+      & .mt-tips__link {
+        transform: scale(1);
+      }
+    }
+  }
+  &__link {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba( 0, 0, 0, .53);
+    transform: scale(0);
+  }
+  &__desc {
+    padding-top: 10px;
+    &--white {
+      padding: 10px;
+    }
+  }
+  &__likes {
+    margin-bottom: 5px;
+    & a {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: @FW-Medium;
+      color: #f4f4f4;
+      margin-left: 10px;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:first-child img {
+        vertical-align: baseline;
+      }
+      &:last-child img {
+        margin-bottom: -5px;
+      }
+      & img {
+        margin-right: 3px;
+        max-width: 14px;
+        max-height: 16px;
+      }
+    }
+    &--white {
+      & a {
+        color: @C-textblack;
+      }
+    }
+  }
+  &__text {
+    font-size: 13px;
+    line-height: 1.55;
+    color: #ffffff;
+    font-weight: @FW-Medium;
+    margin-bottom: 10px;
+    &--white {
+      color: @C-textblack;
+      font-weight: @FW-SemiBold;
+    }
+  }
+  &__info {
+    font-size: 12px;
+    color: @C-grey;
+    font-weight: @FW-Medium;
+    line-height: 1;
+    letter-spacing: normal;
+    & p {
+      display: inline-block;
+      margin-left: 10px;
+      &:first-child {
+        margin-left: 0;
+      }
+      & img {
+        width: 12px;
+        height: 12px;
+        margin-right: 4px;
+      }
+    }
+  }
+}

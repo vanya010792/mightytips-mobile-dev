@@ -1,0 +1,135 @@
+.mt-footer {
+  background-color: @C-bgfooter;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  &__left {
+    flex: 0 0 270px;
+    padding: 50px 20px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      width: 100vw;
+      height: 100%;
+      background-color: @C-gray;
+    }
+    &_wrap {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  }
+  &__right {
+    padding: 50px 0;
+    flex: 1 1 auto;
+  }
+  &__logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    & a {
+      max-width: 120px;
+      &:hover {
+        filter: grayscale(80%);
+      }
+    }
+  }
+  &__partners {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    & a {
+      &:hover {
+        filter: grayscale(80%);
+      }
+    }
+  }
+  &__social {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25px;
+    &_18 {
+      flex: 0 0 40px;
+      width: 40px;
+      height: 40px;
+      & a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: @C-red;
+        border-radius: 3px;
+        color: #FFFFFF;
+        font-size: 15px;
+        font-weight: @FW-ExtraBold;
+        border: 1px solid @C-red;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+    &_icon {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      & a {
+        height: 18px;
+        &:not(:first-child) {
+          margin-left: 15px;
+        }
+        &:hover {
+          opacity: .65;
+        }
+      }
+    }
+  }
+  &__copyright {
+    font-size: 13px;
+    font-weight: @FW-Medium;
+    color: @C-grey;
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    &_list {
+      max-width: 200px;
+      padding: 0 10px;
+      & li {
+        & div {
+          margin-bottom: 20px;
+          font-size: 13px;
+          font-weight: @FW-Medium;
+          color: @C-blue;
+        }
+        & a {
+          display: inline-block;
+          margin-bottom: 10px;
+          font-size: 13px;
+          color: #FFFFFF;
+          font-weight: @FW-Medium;
+          &:hover {
+            color: @C-blue;
+          }
+        }
+      }
+    }
+  }
+}
