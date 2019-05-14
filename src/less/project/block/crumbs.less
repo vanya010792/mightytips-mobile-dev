@@ -1,10 +1,9 @@
 .mt-crumbs {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
   padding: 15px 0 15px 0;
+  text-align: left;
   &__link {
+    display: inline-block;
+    vertical-align: middle;
     color: @C-text-gray;
     font-size: 12px;
     font-weight: @FW-SemiBold;
@@ -13,16 +12,20 @@
     }
   }
   &__text {
+    display: inline-block;
+    vertical-align: middle;
     color: @C-text-gray;
     font-weight: @FW-SemiBold;
     font-size: 12px;
   }
   &__separator {
-    width: 7px;
-    height: 7px;
-    border-right: 1px solid @C-text-gray;
-    border-top: 1px solid @C-text-gray;
-    transform: rotate(45deg);
-    margin: -1px 8px 0 5px;
+    display: inline-block;
+    vertical-align: middle;
+    &::before {
+      content: '>';
+      font-size: 14px;
+      color: @C-textblack;
+    }
+    margin: 0 8px 0 5px;
   }
 }

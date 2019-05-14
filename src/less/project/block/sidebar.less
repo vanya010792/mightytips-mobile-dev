@@ -86,25 +86,31 @@
   &_wrap {
     padding: 10px;
     background-color: #ffffff;
-    &:not(:last-child) {
-      border-bottom: 1px solid @C-border;
+    border-bottom: 1px solid @C-border;
+    &:last-child {
+      border-bottom: none;
     }
   }
   &_item {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    display: table;
+    width: 100%;
+    font-size: 0;
+    letter-spacing: -.31em;
   }
   &_img {
-    flex: 0 0 132px;
+    display: table-cell;
+    width: 132px;
+    vertical-align: middle;
     padding-right: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    & img {
+      width: 100%;
+    }
   }
   &_desc {
-    flex: 1 1 auto;
+    display: table-cell;
+    vertical-align: middle;
     text-align: left;
+    letter-spacing: normal;
   }
   &_text {
     font-size: 12px;
@@ -114,17 +120,16 @@
     margin-bottom: 3px;
   }
   &_info {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     font-size: 12px;
     color: @C-grey;
     font-weight: @FW-Medium;
     line-height: 1.5;
     margin-bottom: 5px;
     & p {
-      &:not(:first-child) {
-        margin-left: 10px;
+      margin-left: 10px;
+      display: inline-block;
+      &:first-child {
+        margin-left: 0;
       }
       & img {
         width: 12px;
@@ -134,21 +139,23 @@
     }
   }
   &_link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: table;
+    width: 100%;
+    font-size: 0;
+    letter-spacing: -.31em;
   }
   &_likes {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    display: table-cell;
+    width: 50%;
     margin-bottom: 5px;
+    vertical-align: middle;
     & a {
       font-size: 13px;
       font-weight: @FW-Medium;
       color: @C-textblack;
-      &:not(:first-child) {
-        margin-left: 10px;
+      margin-left: 10px;
+      &:first-child {
+        margin-left: 0;
       }
       &:first-child img {
         vertical-align: baseline;
@@ -162,6 +169,11 @@
         max-height: 16px;
       }
     }
+  }
+  &_btn {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
   }
 }
 .mt-sidebar__hashtags {

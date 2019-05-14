@@ -1,50 +1,39 @@
 .mt-faq {
-  margin-bottom: -20px;
   &__title {
     background-color: #ffffff;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     font-size: 15px;
+    position: relative;
     font-weight: @FW-SemiBold;
     color: @C-textblack;
-    padding: 25px 40px 20px 20px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    transition: .3s;
-    &::before {
-      content: '';
+    padding: 15px 25px 15px 15px;
+    margin-bottom: 10px;
+    &::after {
+      content: '+';
       position: absolute;
-      right: 20px;
-      top: -2px;
-      bottom: 0;
-      margin: auto;
-      width: 8px;
-      height: 8px;
-      border-bottom: 1px solid @C-blue;
-      border-right: 1px solid @C-blue;
-      transform: rotate(45deg);
-      transition: .3s;
-    }
-    &:hover {
+      right: 10px;
+      top: 15px;
+      font-size: 20px;
+      font-weight: @FW-ExtraBold;
       color: @C-blue;
+      letter-spacing: normal;
     }
     &--active {
       color: @C-blue;
-      &::before {
-        top: 8px;
-        transform: rotate(-135deg);
+      &::after {
+        content: '-';
+        font-size: 26px;
+        top: 10px;
       }
     }
   }
   &__drop {
-    margin-top: -20px;
+    margin-top: -10px;
     background-color: #ffffff;
-    padding: 0 20px 25px 20px;
+    padding: 0 15px 15px 15px;
     display: none;
-    &:not(:last-child) {
-      margin-bottom: 20px;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
   &__text {

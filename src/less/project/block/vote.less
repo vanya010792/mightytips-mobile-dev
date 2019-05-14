@@ -1,0 +1,91 @@
+.mt-vote {
+  &__title {
+    font-size: 18px;
+    color: #fff;
+    font-weight: @FW-Bold;
+    background-color: #25373e;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__wrap {
+    background-color: #eaeaea;
+    padding: 20px 10px;
+  }
+  &__item {
+    display: table;
+    margin-bottom: 20px;
+    width: 100%;
+    &:last-child {
+      margin-bottom: 0;
+      & .mt-vote__left {
+        color: #c7c7c7;
+        & .mt-vote__percent {
+          color: #c7c7c7;
+        }
+        &.mt-vote__left--active {
+          border: 2px solid #c7c7c7;
+          color: #ffffff;
+          & .mt-vote__progress {
+            background-color: #c7c7c7;
+          }
+        }
+      }
+    }
+  }
+  &__left {
+    padding: 10px 15px;
+    position: relative;
+    font-weight: @FW-SemiBold;
+    font-size: 16px;
+    display: table-cell;
+    width: 100%;
+    &--active {
+      border: 2px solid @C-gray;
+      color: #ffffff;
+      display: table;
+      width: 100%;
+      & .mt-vote__progress {
+        display: block;
+      }
+      & .mt-vote__name {
+        display: table-cell;
+        width: 100%;
+      }
+      & .mt-vote__percent {
+        display: inline-block;
+      }
+      & + .mt-vote__right {
+        display: none;
+      }
+    }
+  }
+  &__progress {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: @C-gray;
+  }
+  &__name {
+    position: relative;
+  }
+  &__percent {
+    display: none;
+    color: @C-gray;
+    background-color: #eaeaea;
+    padding: 5px;
+    width: 60px;
+    text-align: center;
+    position: relative;
+  }
+  &__right {
+    width: 160px;
+    & .mt-btn {
+      width: 100%;
+      cursor: pointer;
+      transition: .3s;
+    }
+  }
+}

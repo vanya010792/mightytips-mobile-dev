@@ -1,8 +1,7 @@
 .mt-single-article {
   &__item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: table;
+    width: 100%;
     padding: 10px;
     background-color: #FFFFFF;
     box-shadow: 0px 2px 4px 0px rgba(29, 29, 29, 0.15);
@@ -25,14 +24,18 @@
     }
   }
   &__img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 0 0 220px;
-    padding-right: 20px;
+    display: table-cell;
+    width: 220px;
+    padding-right: 15px;
+    vertical-align: middle;
+    & img {
+      width: 100%;
+    }
   }
   &__desc {
-    flex: 1 1 auto;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
   }
   &__title {
     font-weight: @FW-SemiBold;
@@ -43,9 +46,6 @@
     transition: .3s;
   }
   &__date {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     font-size: 12px;
     color: @C-grey;
     font-weight: @FW-Medium;
@@ -53,8 +53,10 @@
     margin-bottom: 7px;
     transition: .3s;
     & p {
-      &:not(:first-child) {
-        margin-left: 10px;
+      display: inline-block;
+      margin-left: 10px;
+      &:first-child {
+        margin-left: 0;
       }
       & img {
         width: 12px;
@@ -71,22 +73,21 @@
     margin-bottom: 7px;
     transition: .3s;
   }
-  &__info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
   &__likes {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    display: inline-block;
+    font-size: 0;
+    letter-spacing: -.31em;
+    width: 40%;
+    text-align: left;
+    vertical-align: middle;
     & a {
       font-size: 13px;
       font-weight: @FW-Medium;
       color: @C-textblack;
       transition: .3s;
-      &:not(:first-child) {
-        margin-left: 10px;
+      margin-left: 10px;
+      &:first-child {
+        margin-left: 0;
       }
       &:first-child img {
         vertical-align: baseline;
@@ -103,5 +104,12 @@
         opacity: .65;
       }
     }
+  }
+  &__link {
+    display: inline-block;
+    width: 58%;
+    font-size: 0;
+    letter-spacing: -.31em;
+    text-align: right;
   }
 }

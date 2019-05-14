@@ -1,12 +1,12 @@
 .mt-bookmakers-overview {
   &__wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
   }
   &__item {
-    width: calc(100% / 3 - (40px / 3));
     box-shadow: 0px 2px 4px 0px rgba(29, 29, 29, 0.15);
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
     & h3 {
       padding: 15px;
       background-color: #25373e;
@@ -16,77 +16,70 @@
     }
   }
   &__rating {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+    display: table;
+    width: 100%;
+    font-size: 0;
+    letter-spacing: -.31em;
     background-color: #FFFFFF;
     &_total {
-      max-width: 180px;
-      width: 100%;
+      width: 180px;
+      display: table-cell;
       border-right: 1px solid @C-border;
       padding: 25px 5px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      text-align: center;
       color: @C-blue;
       font-size: 70px;
       font-weight: @FW-Bold;
       line-height: 0.9;
+      vertical-align: middle;
     }
     &_detail {
-      flex: 1 1 auto;
+      vertical-align: middle;
       padding: 25px 5px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      display: table-cell;
+      text-align: center;
     }
     &_stars {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       text-align: center;
-      &--img {
-        background-image: url(../img/star-yellow-sprite.png);
+      &_img {
+        display: inline-block;
+        width: 160px;
         background-repeat: no-repeat;
-        background-size: cover;
-        width: 25px;
+        background-size: contain;
         height: 26px;
-        overflow: hidden;
-        background-position: 0;
-        &:not(:last-child) {
-          margin-right: 5px;
-        }
       }
-      &--01 {
-        background-position-x: -32px;
+      &--0-0 {
+        background-image: url(../img/star-yellow-0.png);
       }
-      &--02 {
-        background-position-x: -64px;
+      &--0-5 {
+        background-image: url(../img/star-yellow-0-5.png);
       }
-      &--03 {
-        background-position-x: -96px;
+      &--1-0 {
+        background-image: url(../img/star-yellow-1.png);
       }
-      &--04 {
-        background-position-x: -128px;
+      &--1-5 {
+        background-image: url(../img/star-yellow-1-5.png);
       }
-      &--05 {
-        background-position-x: -160px;
+      &--2-0 {
+        background-image: url(../img/star-yellow-2.png);
       }
-      &--06 {
-        background-position-x: -192px;
+      &--2-5 {
+        background-image: url(../img/star-yellow-2-5.png);
       }
-      &--07 {
-        background-position-x: -224px;
+      &--3-0 {
+        background-image: url(../img/star-yellow-3.png);
       }
-      &--08 {
-        background-position-x: -256px;
+      &--3-5 {
+        background-image: url(../img/star-yellow-3-5.png);
       }
-      &--09 {
-        background-position-x: -288px;
+      &--4-0 {
+        background-image: url(../img/star-yellow-4.png);
       }
-      &--full {
-        background-position-x: -320px;
+      &--4-5 {
+        background-image: url(../img/star-yellow-4-5.png);
+      }
+      &--5-0 {
+        background-image: url(../img/star-yellow-5.png);
       }
     }
     &_info {
@@ -95,25 +88,11 @@
       font-weight: @FW-SemiBold;
       margin-bottom: 15px;
     }
-    &_link {
-      max-width: 115px;
-      width: 100%;
-      & .mt-btn {
-        width: 100%;
-      }
-    }
   }
   &__advantages {
-    display: flex;
-    flex-direction: column;
     &_desc {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
       padding: 25px 20px;
       background-color: #FFFFFF;
-      flex: 1 1 auto;
       & li {
         width: 100%;
         text-align: left;
@@ -136,40 +115,30 @@
     }
   }
   &__bonuses {
-    display: flex;
-    flex-direction: column;
     &_desc {
-      display: flex;
-      justify-content: space-between;
-      align-items: stretch;
+      display: table;
+      font-size: 0;
+      letter-spacing: -.31em;
+      width: 100%;
       background-color: #FFFFFF;
       padding: 25px 20px;
-      flex: 1 1 auto;
     }
     &_logo {
-      max-width: 130px;
-      width: 100%;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
+      display: table-cell;
+      width: 130px;
+      vertical-align: middle;
       & div {
-        flex: 0 0 95px;
         width: 95px;
         height: 95px;
         border-radius: 50%;
         background-color: @C-blue;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 60px;
+        text-align: center;
+        padding-top: 17px;
       }
     }
     &_detail {
-      flex: 1 1 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
+      display: table-cell;
+      vertical-align: middle;
       ul {
         margin-bottom: 15px;
         & li {
@@ -194,10 +163,8 @@
       }
     }
     &_link {
-      max-width: 115px;
-      width: 100%;
       & .mt-btn {
-        width: 100%;
+        padding: 14px 42px;
       }
     }
   }
