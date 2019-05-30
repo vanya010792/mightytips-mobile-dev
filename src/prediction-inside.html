@@ -15,13 +15,13 @@
                                 <img src="img/prediction-inside/icon-league-1.png" alt="">
                             </div>
                             <p class="mt-prediction-head__name">PSC</p>
-                            <p class="mt-prediction-head__last-matches">
-                                <span class="mt-prediction-head__last-matches--green">W</span>
-                                <span class="mt-prediction-head__last-matches--green">W</span>
-                                <span class="mt-prediction-head__last-matches--green">W</span>
-                                <span class="mt-prediction-head__last-matches--red">L</span>
-                                <span class="mt-prediction-head__last-matches--green">W</span>
-                            </p>
+                            <!--<p class="mt-prediction-head__last-matches">-->
+                                <!--<span class="mt-prediction-head__last-matches&#45;&#45;green">W</span>-->
+                                <!--<span class="mt-prediction-head__last-matches&#45;&#45;green">W</span>-->
+                                <!--<span class="mt-prediction-head__last-matches&#45;&#45;green">W</span>-->
+                                <!--<span class="mt-prediction-head__last-matches&#45;&#45;red">L</span>-->
+                                <!--<span class="mt-prediction-head__last-matches&#45;&#45;green">W</span>-->
+                            <!--</p>-->
                         </div>
                         <div class="mt-prediction-head__center">
                             <p>June 19</p>
@@ -32,14 +32,14 @@
                                 <img src="img/prediction-inside/icon-league-2.png" alt="">
                             </div>
                             <p class="mt-prediction-head__name">Dijon</p>
-                            <p class="mt-prediction-head__last-matches">
-                                <span class="mt-prediction-head__last-matches--red">L</span>
-                                <span class="mt-prediction-head__last-matches--gray">D</span>
-                                <span class="mt-prediction-head__last-matches--gray">D</span>
-                                <span class="mt-prediction-head__last-matches--red">L</span>
-                                <span class="mt-prediction-head__last-matches--green">W</span>
-                                <span class="mt-prediction-head__last-matches--green">W</span>
-                            </p>
+                            <!--<p class="mt-prediction-head__last-matches">-->
+                                <!--<span class="mt-prediction-head__last-matches&#45;&#45;red">L</span>-->
+                                <!--<span class="mt-prediction-head__last-matches&#45;&#45;gray">D</span>-->
+                                <!--<span class="mt-prediction-head__last-matches&#45;&#45;gray">D</span>-->
+                                <!--<span class="mt-prediction-head__last-matches&#45;&#45;red">L</span>-->
+                                <!--<span class="mt-prediction-head__last-matches&#45;&#45;green">W</span>-->
+                                <!--<span class="mt-prediction-head__last-matches&#45;&#45;green">W</span>-->
+                            <!--</p>-->
                         </div>
                     </div>
                 </div>
@@ -47,12 +47,12 @@
             <!---->
             <div class="mt-content__block">
                 <div class="mt-vote">
-                    <h2 class="mt-vote__title">Do you agree with us ?</h2>
+                    <h2 class="mt-vote__title">Please vote</h2>
                     <div class="mt-vote__wrap">
                         <div class="mt-vote__item">
                             <div class="mt-vote__left mt-vote__left--active">
-                                <div class="mt-vote__progress"></div>
-                                <p class="mt-vote__name">Bournemouth</p>
+                                <div class="mt-vote__progress mt-vote__progress--blue"></div>
+                                <div class="mt-vote__name"><p>Bournemouth</p></div>
                                 <p class="mt-vote__percent" data-percent="90"></p>
                             </div>
                             <div class="mt-vote__right">
@@ -62,7 +62,7 @@
                         <!---->
                         <div class="mt-vote__item">
                             <div class="mt-vote__left">
-                                <div class="mt-vote__progress"></div>
+                                <div class="mt-vote__progress mt-vote__progress--red"></div>
                                 <p class="mt-vote__name">Bournemouth 2</p>
                                 <p class="mt-vote__percent" data-percent="100"></p>
                             </div>
@@ -73,13 +73,19 @@
                         <!---->
                         <div class="mt-vote__item">
                             <div class="mt-vote__left mt-vote__left--active">
-                                <div class="mt-vote__progress"></div>
-                                <p class="mt-vote__name">Draw</p>
+                                <div class="mt-vote__progress mt-vote__progress--yellow"></div>
+                                <div class="mt-vote__name"><p>Draw</p></div>
                                 <p class="mt-vote__percent" data-percent="100"></p>
                             </div>
                             <div class="mt-vote__right">
                                 <button class="mt-btn mt-btn__green mt-btn__green--medium">Vote</button>
                             </div>
+                        </div>
+                        <div class="mt-vote__comments">
+                            <p>Thanks for you vote!</p>
+                            <p>
+                                Please write below why you think so - <a href="#link-comments">go to comments</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -114,12 +120,12 @@
             <div class="mt-content__block">
                 <div class="mt-field">
                     <div class="mt-field__title mt-field__title--red">
-                        <div class="mt-field__title_left">
-                            <div class="mt-field__title_logo"><img src="img/index/logo-matches-1.png" alt=""></div>
-                            <div class="mt-field__title_name">New York Red Bull</div>
-                            <div class="mt-field__title_circle mt-field__title_circle--red"></div>
-                        </div>
-                        <div class="mt-field__combine">4-3-2-1</div>
+                        <h2 class="mt-field__title_left">
+                            <div class="mt-field__title_name mt-field__title_name--red">Red Bull</div>
+                            <div class="mt-field__title_name">vs</div>
+                            <div class="mt-field__title_name mt-field__title_name--blue">New York</div>
+                            <div class="mt-field__title_name">Predicted Lineup</div>
+                        </h2>
                     </div>
                     <div class="mt-field__bg">
                         <img src="img/prediction-inside/field-bg.svg" alt="">
@@ -216,9 +222,11 @@
                         <div class="mt-field__title_left">
                             <div class="mt-field__title_logo"><img src="img/index/logo-matches-2.png" alt=""></div>
                             <div class="mt-field__title_name">Montreal Impact</div>
-                            <div class="mt-field__title_circle mt-field__title_circle--blue"></div>
                         </div>
-                        <div class="mt-field__combine">4-3-3</div>
+                        <div class="mt-field__title_right">
+                            <div class="mt-field__title_logo"><img src="img/index/logo-matches-2.png" alt=""></div>
+                            <div class="mt-field__title_name">Montreal Impact</div>
+                        </div>
                     </div>
                     <table class="mt-field__table">
                         <tr>
@@ -559,7 +567,7 @@
                 </div>
             </div>
             <!---->
-            <div class="mt-content__block">
+            <div class="mt-content__block" id="link-comments">
                 <h2 class="mt-title mt-title--block">Comment</h2>
                 <div class="mt-comments">
                     <div class="mt-comments__wrap">

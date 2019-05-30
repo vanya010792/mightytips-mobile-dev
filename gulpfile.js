@@ -53,7 +53,7 @@ gulp.task('less',function(){
         .pipe(less({ plugins: [autoprefixPlugin] }).on('error',function(error){
             console.log(error)
         }))
-        // .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest(path.build.css))
         .pipe(browserSync.stream());
 });

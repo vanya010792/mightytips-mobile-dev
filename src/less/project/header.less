@@ -39,20 +39,20 @@
     & img {
       width: 36px;
       vertical-align: middle;
-      &:first-child {
-        display: inline-block;
-      }
-      &:last-child {
-        display: none;
-        width: 30px;
-      }
+    }
+    &--burger {
+      display: inline-block;
+    }
+    &--close {
+      display: none;
+      width: 30px;
     }
     &--active {
       & img {
-        &:first-child {
+        &.mt-head__toggle--burger {
           display: none;
         }
-        &:last-child {
+        &.mt-head__toggle--close {
           display: inline-block;
         }
       }

@@ -23,50 +23,26 @@
   .mt-field {
     background-color: #ffffff;
     &__title {
-      padding: 15px 10px;
-      &_logo {
-        margin-right: 10px;
-        width: 50px;
-        height: 50px;
-      }
       &_name {
-        font-size: 24px;
-        margin-right: 10px;
+        font-size: 16px;
+        margin-right: 5px;
       }
       &_circle {
-        width: 25px;
-        height: 25px;
+        width: 15px;
+        height: 15px;
         border-radius: 50%;
-        &--red {
-          background-color: @C-red;
-        }
-        &--blue {
-          background-color: @C-blue;
-        }
       }
-    }
-    &__combine {
-      width: 90px;
-      font-size: 24px;
     }
     &__player {
       width: 90px;
       margin-left: -45px;
       &_circle {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
       }
       &_name {
         padding: 4px 2px;
         font-size: 12px;
-      }
-    }
-    &__table {
-      font-size: 15px;
-      & tr {
-        & td {
-          padding: 15px 5px;
-        }
       }
     }
   }
@@ -157,15 +133,11 @@
 @media (max-width: 475px) {
   .mt-field {
     &__title {
-      &_logo {
-        width: 40px;
-        height: 40px;
-      }
       &_name {
-        font-size: 20px;
+        font-size: 15px;
       }
       &--yellow {
-        margin-top: 4px;
+        margin-top: 2px;
       }
     }
     &__bg {
@@ -175,10 +147,6 @@
         object-position: center;
         height: 100%;
       }
-    }
-    &__combine {
-      width: 80px;
-      font-size: 20px;
     }
     &__player {
       width: 80px;
@@ -398,6 +366,9 @@
         }
       }
     }
+  }
+  .mt-field__table {
+    font-size: 14px;
   }
 }
 @media (max-width: 380px) {

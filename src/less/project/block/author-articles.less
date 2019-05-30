@@ -2,6 +2,8 @@
   background-color: #FFFFFF;
   padding: 5px 10px;
   box-shadow: 0px 2px 4px 0px rgba(29, 29, 29, 0.15);
+  font-size: 0;
+  letter-spacing: -.31em;
   &__left {
     display: inline-block;
     width: 60%;
@@ -29,12 +31,22 @@
   &__title {
     display: inline-block;
     vertical-align: middle;
-    & h4 {
+    font-size: 14px;
+    letter-spacing: normal;
+    font-weight: 600;
+    color: #0090d6;
+    margin-bottom: 7px;
+    & a {
       font-size: 14px;
-      font-weight: @FW-SemiBold;
+      letter-spacing: normal;
+      font-weight: 600;
       color: @C-blue;
-      margin-bottom: 7px;
     }
+  }
+  &__about {
+    font-size: 14px;
+    letter-spacing: normal;
+    color: @C-textblack;
   }
   &__stars {
     text-align: left;

@@ -1,20 +1,20 @@
 .mt-vote {
   &__title {
-    font-size: 18px;
+    font-size: 16px;
     color: #fff;
     font-weight: @FW-Bold;
     background-color: #25373e;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     text-transform: uppercase;
   }
   &__wrap {
     background-color: #eaeaea;
-    padding: 20px 10px;
+    padding: 10px;
   }
   &__item {
     display: table;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     width: 100%;
     &:last-child {
       margin-bottom: 0;
@@ -26,15 +26,12 @@
         &.mt-vote__left--active {
           border: 2px solid #c7c7c7;
           color: #ffffff;
-          & .mt-vote__progress {
-            background-color: #c7c7c7;
-          }
         }
       }
     }
   }
   &__left {
-    padding: 10px 15px;
+    padding: 5px 10px;
     position: relative;
     font-weight: @FW-SemiBold;
     font-size: 16px;
@@ -51,6 +48,12 @@
       & .mt-vote__name {
         display: table-cell;
         width: 100%;
+        text-align: left;
+        & p {
+          display: inline-block;
+          background-color: @C-gray;
+          padding: 5px;
+        }
       }
       & .mt-vote__percent {
         display: inline-block;
@@ -66,10 +69,23 @@
     left: 0;
     top: 0;
     bottom: 0;
-    background-color: @C-gray;
+    &--blue {
+      background-color: @C-blue;
+    }
+    &--red {
+      background-color: @C-red;
+    }
+    &--yellow {
+      background-color: @C-yellow;
+    }
   }
   &__name {
     position: relative;
+    & .lazyloaded {
+      width: 20px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
   }
   &__percent {
     display: none;
@@ -86,6 +102,23 @@
       width: 100%;
       cursor: pointer;
       transition: .3s;
+      padding: 10px 20px;
+    }
+  }
+  &__comments {
+    display: none;
+    font-weight: @FW-Bold;
+    font-style: italic;
+    color: @C-gray;
+    & a {
+      color: @C-blue;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    &--active {
+      display: block;
     }
   }
 }

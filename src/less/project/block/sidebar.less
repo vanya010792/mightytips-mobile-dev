@@ -7,13 +7,21 @@
   }
   &__title {
     width: 100%;
-    padding: 18px 15px;
+    padding: 10px 15px;
     background-color: @C-gray2;
     text-transform: uppercase;
     font-weight: @FW-Bold;
     color: @C-white;
-    font-size: 15px;
+    font-size: 13px;
     letter-spacing: normal;
+    &--color {
+      background-color: @C-orange;
+      & span {
+        color: #FFFFFF;
+        letter-spacing: 2px;
+        font-weight: @FW-Black;
+      }
+    }
   }
 }
 .mt-sidebar__bookmakers {
@@ -79,6 +87,119 @@
     }
     & span {
       display: block;
+    }
+  }
+}
+.mt-sidebar__bookmakers-2 {
+  &_wrap {
+    border-bottom: 1px solid @C-border;
+    color: #ffffff;
+    & a {
+      color: #ffffff;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    &--267294 {
+      background-color: #313741;
+      &:hover {
+        background-color: lighten( #313741, 10% );
+      }
+    }
+    &--258797 {
+      background-color: #004EA0;
+      &:hover {
+        background-color: darken( #004EA0, 10% );
+      }
+
+    }
+    &--254291 {
+      background-color: #027C5C;
+      &:hover {
+        background-color: lighten( #027C5C, 10% );
+      }
+    }
+    &--254534 {
+      background-color: #000000;
+      &:hover {
+        background-color: lighten( #000000, 10% );
+      }
+    }
+    &--254384 {
+      background-color: #000C3C;
+      &:hover {
+        background-color: lighten( #000C3C, 10% );
+      }
+    }
+    &--254367 {
+      background-color: #00AE00;
+      &:hover {
+        background-color: lighten( #00AE00, 10% );
+      }
+    }
+    &--254332 {
+      background-color: #000000;
+      &:hover {
+        background-color: lighten( #000000, 10% );
+      }
+    }
+    &--254320 {
+      background-color: #002759;
+      &:hover {
+        background-color: lighten( #002759, 10% );
+      }
+    }
+    &--254312 {
+      background-color: darken(#FFB900, 10%);
+      &:hover {
+        background-color: darken( #FFB900, 10% );
+      }
+    }
+    &--254187 {
+      background-color: #064147;
+      &:hover {
+        background-color: lighten( #064147, 10% );
+      }
+    }
+  }
+  &_btn {
+    margin-left: 10px;
+    display: table-cell;
+    width: 120px;
+    vertical-align: middle;
+  }
+  &_item {
+    display: table;
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 0;
+    letter-spacing: -.31em;
+  }
+  &_logo {
+    vertical-align: middle;
+    display: table-cell;
+    padding-right: 20px;
+    width: 70px;
+    height: 50px;
+    text-align: center;
+    & img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  &_title {
+    vertical-align: middle;
+    display: table-cell;
+    font-weight: @FW-Bold;
+    font-size: 16px;
+    line-height: 1;
+    & p {
+      margin-bottom: 10px;
+    }
+    & span {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: @FW-Reg;
     }
   }
 }
