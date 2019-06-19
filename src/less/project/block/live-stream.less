@@ -1,0 +1,178 @@
+.mt-live-stream {
+  &__title {
+    background-color: @C-red;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    font-weight: @FW-Bold;
+    font-size: 14px;
+  }
+  &__link {
+    background-color: @C-blue;
+    padding: 15px;
+    color: #FFFFFF;
+    font-weight: @FW-Bold;
+    display: block;
+    font-size: 0;
+    letter-spacing: -.31em;
+    &:hover {
+      background-color: lighten( @C-blue, 5% );
+    }
+  }
+  &__text {
+    width: 60%;
+    display: inline-block;
+    vertical-align: middle;
+    & b {
+      font-size: 20px;
+      margin-bottom: 8px;
+      display: block;
+    }
+    & span {
+      font-size: 15px;
+    }
+  }
+  &__img {
+    display: inline-block;
+    width: 40%;
+    text-align: right;
+    vertical-align: middle;
+    & img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    & .icon-stream {
+      width: 50px;
+      height: 50px;
+      margin-right: 20px;
+      animation: iconLiveAnim 1.5s infinite;
+    }
+    & .img-anim {
+      width: 25px;
+      height: 25px;
+      &--4 {
+        opacity: 1;
+        animation: liveStreamAnim4 1.5s infinite;
+      }
+      &--3 {
+        opacity: .75;
+        animation: liveStreamAnim3 1.5s infinite;
+      }
+      &--2 {
+        opacity: .5;
+        animation: liveStreamAnim2 1.5s infinite;
+      }
+      &--1 {
+        opacity: .25;
+        animation: liveStreamAnim1 1.5s infinite;
+      }
+    }
+  }
+}
+@keyframes iconLiveAnim {
+  0% { transform: translateY(0); }
+  28% { transform: translateY(-18px) scale(1.08); }
+  33% { transform: translateY(-19px) scale(1.09); }
+  35% { transform: translateY(-20px) scale(1.1); }
+  45% { transform: translateY(-20px) scale(1.1); }
+  48% { transform: translateY(-18px) scale(1.09); }
+  51% { transform: translateY(-16px) scale(1.08); }
+  54% { transform: translateY(-14px) scale(1.07); }
+  70% { transform: translateY(0) scale(1); }
+  75% { transform: translateY(-10px); }
+  83% { transform: translateY(0); }
+  91% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+@keyframes liveStreamAnim4 {
+  0% { opacity: 1; }
+  5% { opacity: .9; }
+  10% { opacity: .8; }
+  15% { opacity: .7; }
+  20% { opacity: .6; }
+  25% { opacity: .5; }
+  30% { opacity: .4; }
+  35% { opacity: .3; }
+  40% { opacity: .2; }
+  45% { opacity: .1; }
+  50% { opacity: 0; }
+  55% { opacity: .1; }
+  60% { opacity: .2; }
+  65% { opacity: .3; }
+  70% { opacity: .4; }
+  75% { opacity: .5; }
+  80% { opacity: .6; }
+  85% { opacity: .7; }
+  90% { opacity: .8; }
+  95% { opacity: .9; }
+  100% { opacity: 1; }
+}
+@keyframes liveStreamAnim3 {
+  0% { opacity: .75; }
+  5% { opacity: .8; }
+  10% { opacity: .9; }
+  15% { opacity: 1; }
+  20% { opacity: .9; }
+  25% { opacity: .8; }
+  30% { opacity: .7; }
+  35% { opacity: .6; }
+  40% { opacity: .5; }
+  45% { opacity: .4; }
+  50% { opacity: .3; }
+  55% { opacity: .2; }
+  60% { opacity: .1; }
+  65% { opacity: 0; }
+  70% { opacity: .1; }
+  75% { opacity: .2; }
+  80% { opacity: .3; }
+  85% { opacity: .4; }
+  90% { opacity: .5; }
+  95% { opacity: .6; }
+  100% { opacity: .7; }
+}
+@keyframes liveStreamAnim2 {
+  0% { opacity: .5; }
+  5% { opacity: .6; }
+  10% { opacity: .7; }
+  15% { opacity: .8; }
+  20% { opacity: .9; }
+  25% { opacity: 1; }
+  30% { opacity: .9; }
+  35% { opacity: .8; }
+  40% { opacity: .7; }
+  45% { opacity: .6; }
+  50% { opacity: .5; }
+  55% { opacity: .4; }
+  60% { opacity: .3; }
+  65% { opacity: .2; }
+  70% { opacity: .1; }
+  75% { opacity: 0; }
+  80% { opacity: .1; }
+  85% { opacity: .2; }
+  90% { opacity: .3; }
+  95% { opacity: .4; }
+  100% { opacity: .5; }
+}
+@keyframes liveStreamAnim1 {
+  0% { opacity: .25; }
+  5% { opacity: .3; }
+  10% { opacity: .4; }
+  15% { opacity: .5; }
+  20% { opacity: .6; }
+  25% { opacity: .7; }
+  30% { opacity: .8; }
+  35% { opacity: .9; }
+  40% { opacity: 1; }
+  45% { opacity: .9; }
+  50% { opacity: .8; }
+  55% { opacity: .7; }
+  60% { opacity: .6; }
+  65% { opacity: .5; }
+  70% { opacity: .4; }
+  75% { opacity: .3; }
+  80% { opacity: .2; }
+  85% { opacity: .1; }
+  90% { opacity: 0; }
+  95% { opacity: .1; }
+  100% { opacity: .2; }
+}

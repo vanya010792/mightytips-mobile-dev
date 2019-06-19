@@ -1,28 +1,121 @@
 .mt-bonuses-table {
+  &__filter {
+    font-size: 0;
+    letter-spacing: -.31em;
+    margin-bottom: 16px;
+    width: 100%;
+    & p {
+      font-size: 18px;
+      font-weight: @FW-Bold;
+      color: @C-gray2;
+      text-transform: uppercase;
+      vertical-align: middle;
+      padding: 6px;
+    }
+    &_wrap {
+      width: 100%;
+      display: table;
+      border-collapse: collapse;
+      font-size: 0;
+      letter-spacing: -.31em;
+      & a {
+        padding: 12px;
+        display: table-cell;
+        font-size: 12px;
+        font-weight: @FW-Bold;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        text-align: center;
+        transition: .3s;
+        background-color: @C-gray2;
+        &:first-child {
+          &:hover {
+            background-color: @C-orange;
+          }
+          &.active {
+            background-color: @C-orange;
+          }
+        }
+        &:nth-child(2) {
+          &:hover {
+            background-color: @C-green;
+          }
+          &.active {
+            background-color: @C-green;
+          }
+        }
+        &:nth-child(3) {
+          &:hover {
+            background-color: @C-red;
+          }
+          &.active {
+            background-color: @C-red;
+          }
+        }
+        &:nth-child(4) {
+          &:hover {
+            background-color: @C-blue;
+          }
+          &.active {
+            background-color: @C-blue;
+          }
+        }
+        &:last-child {
+          &:hover {
+            background-color: @C-yellow;
+          }
+          &.active {
+            background-color: @C-yellow;
+          }
+        }
+        &.active {
+          cursor: default;
+          pointer-events: none;
+        }
+      }
+    }
+  }
   &__item {
+    width: 100%;
     background-color: #FFFFFF;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
     box-shadow: 0px 2px 4px 0px rgba(29, 29, 29, 0.15);
-    &:not(:last-child) {
-      margin-bottom: 14px;
+    margin-bottom: 8px;
+    display: table;
+    border-collapse: collapse;
+    font-size: 0;
+    letter-spacing: -.31em;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
   &__logo {
-    padding: 20px;
-    flex: 0 0 135px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: table-cell;
+    vertical-align: middle;
+    width: 102px;
+    padding: 8px 15px 8px 12px;
+    & img {
+      height: 75px;
+      vertical-align: middle;
+    }
+  }
+  &__bonus {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 8px 15px 8px 15px;
+    text-transform: uppercase;
+    font-weight: @FW-Bold;
+    font-size: 18px;
+    color: @C-blue;
+    & p:last-child {
+      margin-top: 10px;
+      font-size: 11px;
+      color: @C-textblack;
+    }
   }
   &__desc {
-    flex: 1 1 auto;
-    padding: 20px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 8px 15px 8px 15px;
     text-align: left;
   }
   &__title {
@@ -38,40 +131,19 @@
     margin-bottom: 5px;
   }
   &__info {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    &_item {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      font-weight: @FW-Medium;
-      font-size: 12px;
-      color: @C-blue;
-      &:not(:last-child) {
-        margin-right: 5px;
-      }
-      & b {
-        font-weight: @FW-Bold;
-        color: @C-textblack;
-        margin-right: 5px;
-      }
+    font-weight: @FW-Medium;
+    font-size: 12px;
+    color: @C-blue;
+    & b {
+      font-weight: @FW-Bold;
+      color: @C-textblack;
+      margin-right: 5px;
     }
   }
   &__link {
-    flex: 0 0 140px;
-    padding: 20px;
-    margin-left: 20px;
-    border-left: 1px solid @C-border;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    & .mt-btn {
-      margin-bottom: 20px;
-    }
+    padding: 8px 12px 8px 15px;
+    width: 127px;
+    vertical-align: middle;
+    display: table-cell;
   }
 }

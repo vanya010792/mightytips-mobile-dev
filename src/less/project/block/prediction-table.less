@@ -1,0 +1,93 @@
+.mt-prediction-table {
+  width: 100%;
+  border-collapse: collapse;
+  & .gray {
+    background-color: #f1f1f1;
+  }
+  & .blue {
+    background-color: #ecf6ff;
+  }
+  & .red {
+    background-color: #ffd5d2;
+  }
+  & .green {
+    background-color: #d9f7d9;
+  }
+  & .gray:hover, & .blue:hover {
+    background-color: #79cdff;
+  }
+  & tr {
+    & th {
+      text-align: center;
+      font-size: 13px;
+      font-weight: @FW-Bold;
+      color: #FFFFFF;
+      background-color: @C-gray;
+      height: 30px;
+      padding: 3px;
+    }
+    & > * {
+      border: 2px solid #FFFFFF;
+    }
+  }
+  & tbody {
+    & td {
+      height: 30px;
+      text-align: center;
+      &:first-child {
+        width: 100px;
+      }
+      & a {
+        display: block;
+        height: 100%;
+        line-height: 1;
+        font-size: 13px;
+        padding: 10px 0;
+        color: @C-textblack;
+        & p {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  & .bookmakers {
+    width: 100%;
+    padding: 5px;
+    &:hover {
+      opacity: .65;
+    }
+    & img {
+      border-radius: 3px;
+    }
+    &--267294 {
+      background-color: #313741;
+    }
+    &--258797 {
+      background-color: #004EA0;
+    }
+    &--254291 {
+      background-color: #027C5C;
+    }
+    &--254534 {
+      background-color: #000000;
+    }
+    &--254384 {
+      background-color: #000C3C;
+    }
+    &--254367 {
+      background-color: #00AE00;
+    }
+    &--254332 {
+      background-color: #000000;
+    }
+    &--254320 {
+      background-color: #002759;
+    }
+    &--254312 {
+      background-color: darken(#FFB900, 10%);
+    }
+    &--254187 {
+      background-color: #F8F8F8;
+    }
+  }
+}

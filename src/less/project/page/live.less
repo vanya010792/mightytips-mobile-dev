@@ -1,0 +1,197 @@
+.mt-live {
+  &__data {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: @FW-ExtraBold;
+    color: @C-textblack;
+    margin-bottom: 10px;
+  }
+  &__wrap {
+    border: 2px solid #CCCCCC;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: #FFFFFF;
+    margin-bottom: 10px;
+    font-size: 0;
+    letter-spacing: -.31em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__opponents {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: @C-blue;
+    border-radius: 3px;
+    &_command {
+      color: #FFFFFF;
+      font-size: 20px;
+      font-weight: @FW-ExtraBold;
+      padding: 5px 0;
+      &--left {
+        text-align: right;
+      }
+      &--right {
+        text-align: left;
+      }
+    }
+    &_center {
+      width: 100px;
+      text-align: center;
+      color: #FFFFFF;
+      font-size: 24px;
+      font-weight: @FW-Bold;
+      & span {
+        font-weight: @FW-ExtraBold;
+      }
+    }
+  }
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    & .gray {
+      background-color: #f1f1f1;
+    }
+    & .blue {
+      background-color: #ecf6ff;
+    }
+    & tr {
+      & th {
+        text-align: center;
+        font-size: 15px;
+        font-weight: @FW-Bold;
+        color: @C-textblack;
+      }
+      & > * {
+        border: 3px solid #FFFFFF;
+      }
+    }
+    & .time {
+      font-size: 24px;
+      font-weight: @FW-ExtraBold;
+      color: @C-red;
+      position: relative;
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 80%;
+        height: 1px;
+        background-color: @C-red;
+        right: 0;
+        margin: auto;
+        z-index: 0;
+      }
+      &::before {
+        top: -4px;
+      }
+      &::after {
+        top: 4px;
+      }
+      & b {
+        background-color: #FFFFFF;
+        padding: 0 8px;
+        position: relative;
+        z-index: 1;
+      }
+    }
+    & tbody {
+      & td {
+        height: 40px;
+        text-align: center;
+        & a {
+          display: block;
+          line-height: 1;
+          font-size: 15px;
+          padding: 15px 0;
+          color: @C-textblack;
+          &.red {
+            background-color: #ffd5d2;
+          }
+          &.green {
+            background-color: #d9f7d9;
+          }
+          &.gray:hover, &.blue:hover {
+            background-color: #79cdff;
+          }
+          & p {
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+    & .bookmakers {
+      border-radius: 3px;
+      padding: 0;
+      &:hover {
+        opacity: .65;
+      }
+      & img {
+        border-radius: 3px;
+        height: 30px;
+      }
+      &--267294 {
+        background-color: #313741;
+      }
+      &--258797 {
+        background-color: #004EA0;
+      }
+      &--254291 {
+        background-color: #027C5C;
+      }
+      &--254534 {
+        background-color: #000000;
+      }
+      &--254384 {
+        background-color: #000C3C;
+      }
+      &--254367 {
+        background-color: #00AE00;
+      }
+      &--254332 {
+        background-color: #000000;
+      }
+      &--254320 {
+        background-color: #002759;
+      }
+      &--254312 {
+        background-color: darken(#FFB900, 10%);
+      }
+      &--254187 {
+        background-color: #F8F8F8;
+      }
+    }
+  }
+  &__btn {
+    width: 100%;
+    display: block;
+    border: 3px solid #FFFFFF;
+    & a {
+      display: block;
+      text-align: center;
+      height: 100%;
+      width: 100%;
+      color: @C-textblack;
+      font-weight: @FW-Medium;
+      font-size: 20px;
+      text-transform: uppercase;
+      line-height: 1;
+      padding: 5px;
+      border-radius: 3px;
+      background-color: @C-yellow;
+      & span {
+        vertical-align: middle;
+      }
+      & p {
+        display: inline-block;
+        margin-left: 10px;
+        vertical-align: middle;
+      }
+      &:hover {
+        opacity: .65;
+      }
+    }
+  }
+}

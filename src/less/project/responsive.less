@@ -128,8 +128,69 @@
       }
     }
   }
+  .mt-bonuses-table {
+    &__filter {
+      & p {
+        font-size: 16px;
+      }
+      &_wrap {
+        display: block;
+        text-align: center;
+        & a {
+          height: 53px;
+          width: 50%;
+          display: inline-block;
+          vertical-align: middle;
+          border: 0.1px solid #FFFFFF;
+        }
+      }
+    }
+    &__item {
+      display: block;
+    }
+    &__logo {
+      display: inline-block;
+      width: 50%;
+      padding: 8px;
+      text-align: right;
+    }
+    &__bonus {
+      width: 50%;
+      display: inline-block;
+      padding: 8px;
+      text-align: left;
+    }
+    &__desc {
+      display: block;
+      padding: 8px;
+    }
+    &__info {
+      font-weight: @FW-Medium;
+      font-size: 12px;
+      color: @C-blue;
+      & b {
+        font-weight: @FW-Bold;
+        color: @C-textblack;
+        margin-right: 5px;
+      }
+    }
+    &__link {
+      padding: 8px;
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  }
+  .mt-live-stream__text {
+    width: 75%;
+  }
+  .mt-live-stream__img {
+    width: 25%;
+    & .img-anim {
+      display: none;
+    }
+  }
 }
-
 @media (max-width: 475px) {
   .mt-field {
     &__title {
@@ -229,6 +290,65 @@
   }
   .mt-article__title {
     display: inline-block;
+  }
+  .mt-live {
+    &__data {
+      font-size: 16px;
+    }
+    &__wrap {
+      border: 1px solid #CCCCCC;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__opponents {
+      &_center {
+        width: 60px;
+        font-size: 20px;
+        color: @C-textblack;
+        & span {
+          display: none;
+        }
+      }
+      &_command {
+        font-size: 18px;
+      }
+    }
+    &__table {
+      & tbody {
+        & td {
+          height: 30px;
+          & a {
+            padding: 10px 0;
+          }
+        }
+      }
+      & tr {
+        & th {
+          font-size: 13px;
+        }
+        & > * {
+          border: 2px solid #FFFFFF;
+        }
+      }
+      & .time {
+        font-size: 20px;
+        &::before, &::after {
+          width: 100%;
+        }
+        & b {
+          padding: 0 4px;
+        }
+      }
+    }
+    &__btn {
+      & a {
+        font-size: 18px;
+        & img {
+          width: 22px;
+        }
+      }
+    }
   }
   .mt-vote__right {
     width: 100px;
@@ -370,6 +490,24 @@
   .mt-field__table {
     font-size: 14px;
   }
+  //.mt-vote {
+  //  &__list {
+  //    display: block;
+  //    border-spacing: 0;
+  //  }
+  //  &__item {
+  //    width: 100%;
+  //    display: block;
+  //    margin-bottom: 5px;
+  //    &:last-child {
+  //      margin-bottom: 0;
+  //    }
+  //  }
+  //  &__logo {
+  //    width: 30%;
+  //    text-align: right;
+  //  }
+  //}
 }
 @media (max-width: 380px) {
   .mt-author-articles__date {

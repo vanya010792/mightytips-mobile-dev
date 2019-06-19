@@ -1,0 +1,84 @@
+.mt-prediction-social {
+  font-size: 0;
+  letter-spacing: -.31em;
+  &__text {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: @FW-Reg;
+    color: @C-textblack;
+    width: 50%;
+    vertical-align: middle;
+  }
+  &__link {
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    & a {
+      display: inline-block;
+      margin-right: 10px;
+      transition: .3s;
+      &.facebook {
+        & .img, & .text {
+          background-color: #3B5998;
+        }
+      }
+      &.vk {
+        & .img, & .text {
+          background-color: #4D76A1;
+        }
+      }
+      &.youtube {
+        & .img, & .text {
+          background-color: #DC472E;
+        }
+      }
+      &.telegram {
+        & .img, & .text {
+          background-color: #41B4E6;
+        }
+      }
+      &.skype {
+        & .img, & .text {
+          background-color: #00AAF2;
+        }
+      }
+      &.twitter {
+        & .img, & .text {
+          background-color: #55ACEE;
+        }
+      }
+      &.whatsapp {
+        & .img, & .text {
+          background-color: #1BD741;
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        opacity: .65;
+      }
+      & .img {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        vertical-align: middle;
+        border-right: 1px solid #FFFFFF;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+      }
+      & .text {
+        padding: 0 10px;
+        height: 30px;
+        display: inline-block;
+        font-size: 13px;
+        color: #FFFFFF;
+        vertical-align: middle;
+        line-height: 30px;
+        font-weight: @FW-Medium;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+    }
+  }
+}
