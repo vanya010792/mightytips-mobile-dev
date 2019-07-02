@@ -46,6 +46,9 @@
       }
     }
   }
+  .mt-prediction-table-rating__table tr th {
+    font-size: 13px;
+  }
 }
 @media ( max-width: 540px ) {
   .mt-poster {
@@ -146,19 +149,25 @@
       }
     }
     &__item {
-      display: block;
+      display: inline-block;
+      width: 49%;
+      vertical-align: top;
     }
     &__logo {
       display: inline-block;
       width: 50%;
       padding: 8px;
       text-align: right;
+      & img {
+        height: 60px;
+      }
     }
     &__bonus {
       width: 50%;
       display: inline-block;
       padding: 8px;
       text-align: left;
+      font-size: 20px;
     }
     &__desc {
       display: block;
@@ -179,6 +188,15 @@
       width: 100%;
       display: block;
       text-align: center;
+      & a {
+        display: inline-block;
+        width: 50%;
+      }
+      & .mt-bonuses-table__terms {
+        width: 50%;
+        display: inline-block;
+        padding: 0 5px;
+      }
     }
   }
   .mt-live-stream__text {
@@ -255,6 +273,16 @@
       &_name {
         font-size: 10px;
       }
+    }
+  }
+  .mt-bonuses-table__link {
+    padding: 5px;
+    width: 100%;
+    & a {
+      width: 100%;
+    }
+    & .mt-bonuses-table__terms {
+      width: 100%;
     }
   }
 }
@@ -352,6 +380,9 @@
   }
   .mt-vote__right {
     width: 100px;
+  }
+  .mt-prediction-table-rating__table tr th {
+    font-size: 11px;
   }
 }
 @media ( max-width: 425px ) {
@@ -508,6 +539,97 @@
   //    text-align: right;
   //  }
   //}
+  .mt-bonuses-table__logo {
+    & img {
+      height: 75px;
+    }
+  }
+  .mt-bonuses-table__bonus {
+    font-size: 24px;
+    & p:last-child {
+      font-size: 13px;
+      margin-top: 5px;
+    }
+  }
+  .mt-bonuses-table__item {
+    width: 100%;
+    display: block;
+  }
+  .mt-bonuses-table__link {
+    & a {
+      width: 50%;
+    }
+    & .mt-bonuses-table__terms {
+      width: 50%;
+    }
+  }
+  .mt-prediction-vote2 {
+    &__title {
+      font-size: 14px;
+      padding: 10px;
+    }
+    &__coefficient {
+      padding: 10px;
+      font-size: 14px;
+      & span {
+        padding: 6px;
+        font-size: 13px;
+      }
+    }
+    &__option {
+      padding: 10px;
+      margin-bottom: 10px;
+      & .mt-btn {
+        font-size: 12px;
+      }
+    }
+    &__img {
+      width: 40px;
+    }
+    &__link {
+      margin: 0 5px;
+      & a {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 5px;
+        font-size: 12px;
+      }
+    }
+    &__terms {
+      font-size: 12px;
+    }
+    &__bonus {
+      font-size: 12px;
+    }
+    &__statistic {
+      padding: 0 10px;
+      margin-bottom: 10px;
+      & p {
+        font-size: 13px;
+      }
+    }
+    &__votes {
+      padding: 0 10px;
+      &_btn {
+        & a {
+          width: 49%;
+          font-size: 14px;
+          padding: 8px;
+        }
+      }
+      &_statistic {
+        & .rating-percent {
+          font-size: 13px;
+          margin-bottom: 10px;
+        }
+        & .rating-line {
+          & span {
+            height: 10px;
+          }
+        }
+      }
+    }
+  }
 }
 @media (max-width: 380px) {
   .mt-author-articles__date {

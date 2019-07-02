@@ -1,0 +1,210 @@
+.mt-prediction-vote2 {
+  padding: 10px 0;
+  text-align: center;
+  background-color: #FFFFFF;
+  font-size: 0;
+  letter-spacing: -.31em;
+  &__title {
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    color: @C-gray2;
+    font-weight: @FW-SemiBold;
+    border-bottom: 2px solid @C-border-white;
+    text-transform: uppercase;
+    padding: 15px;
+    max-width: 600px;
+  }
+  &__coefficient {
+    padding: 15px;
+    border-bottom: 2px solid @C-border-white;
+    font-weight: @FW-SemiBold;
+    font-size: 16px;
+    text-align: center;
+    & span {
+      padding: 8px;
+      color: #FFFFFF;
+      font-size: 14px;
+      background-color: darken( @C-green, 10% );
+      margin-left: 6px;
+    }
+  }
+  &__option {
+    display: table;
+    border-bottom: 2px solid @C-border-white;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    & .mt-btn {
+      text-align: center;
+      vertical-align: middle;
+      display: table-cell;
+      font-size: 14px;
+    }
+  }
+  &__img {
+    display: table-cell;
+    width: 60px;
+    vertical-align: middle;
+  }
+  &__link {
+    vertical-align: middle;
+    display: table-cell;
+    margin: 0 10px;
+    text-align: center;
+    & a {
+      display: inline-block;
+      vertical-align: middle;
+      padding: 15px 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+  &__terms {
+    color: #FFFFFF;
+    background-color: @C-red;
+    border: 2px solid @C-red;
+    font-size: 14px;
+    box-shadow: 0px 4px 8px 0px rgba(237, 21, 21, 0.39);
+    &:hover {
+      color: @C-red;
+      background-color: #FFFFFF;
+    }
+  }
+  &__bonus {
+    border-top: 2px solid @C-border;
+    border-right: 2px solid @C-border;
+    border-bottom: 2px solid @C-border;
+    color: @C-textblack;
+    font-size: 14px;
+    font-weight: @FW-Medium;
+    text-transform: uppercase;
+    & img {
+      margin-bottom: 6px;
+      margin-right: 6px;
+    }
+    &:hover {
+      background-color: @C-border;
+      border-top: 2px solid @C-textblack;
+      border-right: 2px solid @C-textblack;
+      border-bottom: 2px solid @C-textblack;
+    }
+  }
+  &__statistic {
+    display: table;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    & p {
+      display: table-cell;
+      font-size: 14px;
+      color: @C-textblack;
+      font-weight: @FW-SemiBold;
+      &:first-child {
+        text-align: left;
+      }
+      &:last-child {
+        text-align: right;
+        color: #d7d7d7;
+      }
+    }
+  }
+  &__votes {
+    padding: 0 15px;
+    &--active {
+      & .mt-prediction-vote2__votes_btn {
+        display: none;
+      }
+      & .mt-prediction-vote2__votes_statistic {
+        display: block;
+      }
+    }
+    &_btn {
+      font-size: 0;
+      & a {
+        display: inline-block;
+        width: 48%;
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: @FW-Bold;
+        padding: 10px;
+        border-radius: 8px;
+        margin-left: 4%;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:hover {
+          background-color: #FFFFFF;
+        }
+      }
+      & .yes {
+        background-color: @C-green;
+        border: 2px solid @C-green;
+        &:hover {
+          background-color: #FFFFFF;
+          color: @C-green;
+        }
+      }
+      & .no {
+        background-color: @C-red;
+        border: 2px solid @C-red;
+        &:hover {
+          color: @C-red;
+        }
+      }
+    }
+    &_statistic {
+      display: none;
+      & .rating-percent {
+        display: table;
+        font-size: 14px;
+        font-weight: @FW-Bold;
+        margin-bottom: 15px;
+        width: 100%;
+        & p {
+          display: table-cell;
+        }
+        & .green {
+          color: @C-green;
+          text-align: left;
+          & span {
+            margin-left: 10px;
+          }
+          & img {
+            margin-left: 10px;
+          }
+        }
+        & .red {
+          text-align: right;
+          color: @C-red;
+          & span {
+            margin-right: 10px;
+          }
+          & img {
+            margin-right: 10px;
+          }
+        }
+      }
+      & .rating-line {
+        position: relative;
+        & span {
+          display: block;
+          width: 100%;
+          height: 13px;
+        }
+        & .red {
+          background-color: @C-red;
+        }
+        & .green {
+          transition: .5s;
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          background-color: @C-green;
+        }
+      }
+    }
+  }
+}

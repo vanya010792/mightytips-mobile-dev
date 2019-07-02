@@ -78,4 +78,25 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }, 100);
     }
+
+    if( document.querySelector( '.mt-popup__special' ) ) {
+        document.querySelector( '.mt-popup__special_overlay' )
+        .addEventListener( 'click', function () {
+            document.querySelector( '.mt-popup__special' ).classList.remove( 'mt-popup__special--active' );
+        });
+        document.querySelector( '.mt-popup__special_close' )
+            .addEventListener( 'click', function () {
+                document.querySelector( '.mt-popup__special' ).classList.remove( 'mt-popup__special--active' );
+            });
+    }
+    if( document.querySelector( '.mt-popup__bonus' ) ) {
+        document.querySelector( '.mt-popup__bonus_close' )
+            .addEventListener( 'click', function () {
+                document.querySelector( '.mt-popup__bonus' ).classList.remove( 'mt-popup__bonus--active' );
+            });
+        document.querySelector( '.mt-popup__bonus_overlay' )
+            .addEventListener( 'click', function () {
+                document.querySelector( '.mt-popup__bonus' ).classList.remove( 'mt-popup__bonus--active' );
+            });
+    }
 });

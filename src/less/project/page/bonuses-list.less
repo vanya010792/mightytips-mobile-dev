@@ -36,41 +36,13 @@
             background-color: @C-orange;
           }
         }
-        &:nth-child(2) {
-          &:hover {
-            background-color: @C-green;
-          }
-          &.active {
-            background-color: @C-green;
-          }
-        }
-        &:nth-child(3) {
-          &:hover {
-            background-color: @C-red;
-          }
-          &.active {
-            background-color: @C-red;
-          }
-        }
-        &:nth-child(4) {
-          &:hover {
-            background-color: @C-blue;
-          }
-          &.active {
-            background-color: @C-blue;
-          }
-        }
-        &:last-child {
-          &:hover {
-            background-color: @C-yellow;
-          }
-          &.active {
-            background-color: @C-yellow;
-          }
+        &:hover {
+          background-color: @C-blue;
         }
         &.active {
           cursor: default;
           pointer-events: none;
+          background-color: @C-blue;
         }
       }
     }
@@ -99,6 +71,7 @@
     }
   }
   &__bonus {
+    width: 120px;
     display: table-cell;
     vertical-align: middle;
     padding: 8px 15px 8px 15px;
@@ -145,5 +118,13 @@
     width: 127px;
     vertical-align: middle;
     display: table-cell;
+    & .mt-bonuses-table__terms {
+      width: 100%;
+      text-align: center;
+      font-size: 11px;
+      color: @C-textblack;
+      margin-top: 10px;
+      font-weight: @FW-Bold;
+    }
   }
 }
