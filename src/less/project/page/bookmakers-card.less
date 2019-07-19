@@ -1,0 +1,826 @@
+.mt-bookmakers-card__head {
+  & .bnr {
+    font-size: 0;
+    letter-spacing: -.31em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 30px 20px;
+    &__title {
+      font-size: 42px;
+      line-height: 1.3;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      font-weight: @FW-Bold;
+      margin-bottom: 10px;
+      & .yellow {
+        color: @C-yellow;
+      }
+    }
+    &__rating {
+      font-size: 0;
+      letter-spacing: -.31em;
+      margin-bottom: 10px;
+      &_stars {
+        display: inline-block;
+        vertical-align: middle;
+        & .star {
+          display: inline-block;
+          vertical-align: middle;
+          background-image: url( ../img/star-yellow-sprite.png );
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 23px;
+          height: 23px;
+          margin-right: 4px;
+          overflow: hidden;
+          &:last-child {
+            margin-right: 10px;
+          }
+          &--0 {
+            background-position: 0;
+          }
+          &--1 {
+            background-position-x: -28px;
+          }
+          &--2 {
+            background-position-x: -56px;
+          }
+          &--3 {
+            background-position-x: -84px;
+          }
+          &--4 {
+            background-position-x: -113px;
+          }
+          &--5 {
+            background-position-x: -142px;
+          }
+          &--6 {
+            background-position-x: -170px;
+          }
+          &--7 {
+            background-position-x: -198px;
+          }
+          &--8 {
+            background-position-x: -224px;
+          }
+          &--9 {
+            background-position-x: -252px;
+          }
+          &--10 {
+            background-position: right;
+          }
+        }
+      }
+      &_total {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 26px;
+        color: #FFFFFF;
+        font-weight: @FW-Bold;
+      }
+    }
+    &__from {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 10px;
+      & .img {
+        max-width: 36px;
+        margin-right: 10px;
+        min-width: 20px;
+      }
+      & .text {
+        font-size: 14px;
+        color: #FFFFFF;
+        font-weight: @FW-SemiBold;
+      }
+    }
+    &__btn {
+      font-size: 0;
+      letter-spacing: -.31em;
+      & .mt-btn {
+        display: inline-block;
+        vertical-align: middle;
+        width: 46%;
+        padding: 14px 10px;
+        font-size: 15px;
+        &__green {
+          margin-right: 8%;
+        }
+        &__blue {
+          transition: .3s;
+          padding: 14px 30px;
+        }
+      }
+    }
+  }
+  & .mt-sidebar {
+    & .information {
+      padding-bottom: 15px;
+      font-size: 0;
+      &__item {
+        padding-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      &__head {
+        display: table;
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 7px;
+        font-size: 14px;
+        font-weight: @FW-SemiBold;
+        color: @C-textblack;
+        & p {
+          display: table-cell;
+          width: 100%;
+        }
+        & span {
+          display: table-cell;
+        }
+      }
+      &__progress {
+        height: 4px;
+        background-color: @C-border;
+        border-radius: 2px;
+      }
+      &__line {
+        background-color: @C-blue;
+        height: 100%;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+.mt-bookmakers-card__nav {
+  & .menu {
+    font-size: 0;
+    letter-spacing: -.31em;
+    padding: 0 15px;
+    & a {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 15px;
+      font-weight: @FW-Medium;
+      color: @C-blue;
+      padding: 10px 15px;
+      &:hover {
+        color: @C-textblack;
+      }
+    }
+  }
+}
+.mt-bookmakers-card__content {
+  & .mt-content__block--white {
+    margin-bottom: 15px;
+  }
+  & .information {
+    padding: 15px;
+    & .list {
+      & li {
+        margin-bottom: 10px;
+        font-size: 13px;
+        color: @C-textblack;
+        font-weight: @FW-Bold;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        & span {
+          vertical-align: middle;
+        }
+        & img {
+          margin-right: 10px;
+          max-width: 21px;
+          min-width: 20px;
+          vertical-align: middle;
+        }
+      }
+    }
+    & .table {
+      margin-bottom: 15px;
+      & tr {
+        & td {
+          width: 50%;
+          padding: 7px 0;
+          vertical-align: top;
+          font-size: 13px;
+          color: @C-textblack;
+          &:first-child {
+            font-weight: @FW-Bold;
+          }
+          &:last-child {
+            font-weight: @FW-Medium;
+          }
+          & .link-blue {
+            color: @C-blue;
+            font-size: 13px;
+            font-weight: @FW-Medium;
+            &:hover {
+              color: @C-textblack;
+            }
+          }
+        }
+      }
+      &__btn {
+        & .mt-btn {
+          width: 100%;
+          padding: 12px 5px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  & .panel-comments {
+    font-size: 0;
+    letter-spacing: -.31em;
+    padding: 10px 15px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(29,29,29,.15);
+    border-bottom: 1px solid @C-border;
+    &>*{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &__text {
+      font-size: 14px;
+      color: @C-textblack;
+      font-weight: @FW-Bold;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    &__number {
+      font-size: 17px;
+      color: @C-gray;
+      font-weight: @FW-Bold;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    &__stars {
+      font-size: 0;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      & .star {
+        display: inline-block;
+        vertical-align: middle;
+        background-image: url( ../img/star-yellow-sprite.png );
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 13px;
+        flex: 0 0 13px;
+        height: 13px;
+        margin-right: 2px;
+        overflow: hidden;
+        &:last-child {
+          margin-right: 0;
+        }
+        &--0 {
+          background-position: 0;
+        }
+        &--1 {
+          background-position-x: -16px;
+        }
+        &--2 {
+          background-position-x: -32px;
+        }
+        &--3 {
+          background-position-x: -48px;
+        }
+        &--4 {
+          background-position-x: -64px;
+        }
+        &--5 {
+          background-position-x: -80px;
+        }
+        &--6 {
+          background-position-x: -96px;
+        }
+        &--7 {
+          background-position-x: -112px;
+        }
+        &--8 {
+          background-position-x: -128px;
+        }
+        &--9 {
+          background-position-x: -144px;
+        }
+        &--10 {
+          background-position: right;
+        }
+      }
+    }
+    &__link {
+      width: 100%;
+      font-size: 13px;
+      color: @C-blue;
+      font-weight: @FW-Medium;
+      text-decoration: underline;
+      margin-right: 10px;
+      text-align: left;
+      margin-bottom: 10px;
+      &:hover, &--active {
+        color: @C-textblack;
+      }
+    }
+    & .mt-btn {
+      width: 48%;
+      font-size: 13px;
+      padding: 10px;
+      margin-right: 4%;
+      &:last-child {
+        margin-right: 0;
+      }
+      &__blue {
+        &--active {
+          background-color: #FFFFFF;
+          color: @C-blue;
+        }
+      }
+    }
+  }
+  & .write-comment {
+    display: none;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(29,29,29,.15);
+    border-bottom: 1px solid @C-border;
+    padding: 15px;
+    & .form {
+      font-size: 0;
+      letter-spacing: -.31em;
+      &__rating {
+        &_item {
+          display: table;
+          border-collapse: collapse;
+          width: 100%;
+          margin-bottom: 10px;
+          & .title {
+            font-size: 13px;
+            color: @C-textblack;
+            font-weight: @FW-Bold;
+            display: table-cell;
+            vertical-align: middle;
+            width: 50%;
+          }
+          & .rating {
+            width: 50%;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: right;
+            & .stars {
+              display: inline-block;
+              cursor: pointer;
+              & .star {
+                display: inline-block;
+                vertical-align: middle;
+                background-image: url( ../img/star-yellow-sprite.png );
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 13px;
+                flex: 0 0 13px;
+                height: 13px;
+                margin-right: 2px;
+                overflow: hidden;
+                &:last-child {
+                  margin-right: 0;
+                }
+                &:hover {
+                  background-position: right;
+                }
+              }
+              &--0 {
+                & .star {
+                  background-position: left;
+                }
+              }
+              &--1 {
+                & .star {
+                  background-position: left;
+                  &:nth-child(1) {
+                    background-position: right;
+                  }
+                }
+              }
+              &--2 {
+                & .star {
+                  background-position: left;
+                  &:nth-child(1) {
+                    background-position: right;
+                  }
+                  &:nth-child(2) {
+                    background-position: right;
+                  }
+                }
+              }
+              &--3 {
+                & .star {
+                  background-position: left;
+                  &:nth-child(1) {
+                    background-position: right;
+                  }
+                  &:nth-child(2) {
+                    background-position: right;
+                  }
+                  &:nth-child(3) {
+                    background-position: right;
+                  }
+                }
+              }
+              &--4 {
+                & .star {
+                  background-position: left;
+                  &:nth-child(1) {
+                    background-position: right;
+                  }
+                  &:nth-child(2) {
+                    background-position: right;
+                  }
+                  &:nth-child(3) {
+                    background-position: right;
+                  }
+                  &:nth-child(4) {
+                    background-position: right;
+                  }
+                }
+              }
+              &--5 {
+                & .star {
+                  background-position: left;
+                  &:nth-child(1) {
+                    background-position: right;
+                  }
+                  &:nth-child(2) {
+                    background-position: right;
+                  }
+                  &:nth-child(3) {
+                    background-position: right;
+                  }
+                  &:nth-child(4) {
+                    background-position: right;
+                  }
+                  &:nth-child(5) {
+                    background-position: right;
+                  }
+                }
+              }
+              &--6 {
+                & .star {
+                  background-position: left;
+                  &:nth-child(1) {
+                    background-position: right;
+                  }
+                  &:nth-child(2) {
+                    background-position: right;
+                  }
+                  &:nth-child(3) {
+                    background-position: right;
+                  }
+                  &:nth-child(4) {
+                    background-position: right;
+                  }
+                  &:nth-child(5) {
+                    background-position: right;
+                  }
+                  &:nth-child(6) {
+                    background-position: right;
+                  }
+                }
+              }
+              &--7 {
+                & .star {
+                  background-position: left;
+                  &:nth-child(1) {
+                    background-position: right;
+                  }
+                  &:nth-child(2) {
+                    background-position: right;
+                  }
+                  &:nth-child(3) {
+                    background-position: right;
+                  }
+                  &:nth-child(4) {
+                    background-position: right;
+                  }
+                  &:nth-child(5) {
+                    background-position: right;
+                  }
+                  &:nth-child(6) {
+                    background-position: right;
+                  }
+                  &:nth-child(7) {
+                    background-position: right;
+                  }
+                }
+              }
+              &--7 {
+                & .star {
+                  background-position: right;
+                  &:nth-child(8) {
+                    background-position: left;
+                  }
+                  &:nth-child(9) {
+                    background-position: left;
+                  }
+                  &:nth-child(10) {
+                    background-position: left;
+                  }
+                }
+              }
+              &--8 {
+                & .star {
+                  background-position: right;
+                  &:nth-child(9) {
+                    background-position: left;
+                  }
+                  &:nth-child(10) {
+                    background-position: left;
+                  }
+                }
+              }
+              &--9 {
+                & .star {
+                  background-position: right;
+                  &:nth-child(10) {
+                    background-position: left;
+                  }
+                }
+              }
+              &--10 {
+                & .star {
+                  background-position: right;
+                }
+              }
+            }
+            & .number {
+              display: inline-block;
+              vertical-align: middle;
+              width: 32px;
+              margin-left: 8px;
+              font-weight: @FW-SemiBold;
+              font-size: 13px;
+              color: @C-gray;
+              text-align: right;
+            }
+          }
+        }
+        &_total {
+          & .rating {
+            & .stars {
+              cursor: default;
+              pointer-events: none;
+              & .star {
+                cursor: default;
+                pointer-events: none;
+                &--0 {
+                  background-position: 0;
+                }
+                &--1 {
+                  background-position-x: -16px;
+                }
+                &--2 {
+                  background-position-x: -32px;
+                }
+                &--3 {
+                  background-position-x: -48px;
+                }
+                &--4 {
+                  background-position-x: -64px;
+                }
+                &--5 {
+                  background-position-x: -80px;
+                }
+                &--6 {
+                  background-position-x: -96px;
+                }
+                &--7 {
+                  background-position-x: -112px;
+                }
+                &--8 {
+                  background-position-x: -128px;
+                }
+                &--9 {
+                  background-position-x: -144px;
+                }
+                &--10 {
+                  background-position: right;
+                }
+              }
+            }
+          }
+        }
+      }
+      &__textarea {
+        margin-bottom: 10px;
+        & textarea {
+          width: 100%;
+          resize: none;
+          height: 100px;
+          padding: 15px;
+          border: 1px solid @C-border;
+          border-radius: 3px;
+          color: @C-blue;
+          font-weight: @FW-SemiBold;
+          font-size: 12px;
+          transition: border .3s;
+          &:focus {
+            border: 1px solid @C-blue;
+          }
+        }
+      }
+      &__btn {
+        & .mt-btn {
+          font-size: 13px;
+          width: 100%;
+          padding: 10px;
+          transition: .3s;
+        }
+      }
+    }
+  }
+  & .details-comment {
+    display: none;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(29,29,29,.15);
+    border-bottom: 1px solid @C-border;
+    padding: 15px;
+    &__rating {
+      &_item {
+        display: table;
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        & .title {
+          font-size: 13px;
+          color: @C-textblack;
+          font-weight: @FW-Bold;
+          display: table-cell;
+          vertical-align: middle;
+          width: 50%;
+        }
+        & .rating {
+          width: 50%;
+          display: table-cell;
+          vertical-align: middle;
+          text-align: right;
+          & .stars {
+            display: inline-block;
+            cursor: pointer;
+            & .star {
+              display: inline-block;
+              vertical-align: middle;
+              background-image: url( ../img/star-yellow-sprite.png );
+              background-repeat: no-repeat;
+              background-size: cover;
+              width: 13px;
+              flex: 0 0 13px;
+              height: 13px;
+              margin-right: 2px;
+              overflow: hidden;
+              &:last-child {
+                margin-right: 0;
+              }
+              &--0 {
+                background-position: 0;
+              }
+              &--1 {
+                background-position-x: -16px;
+              }
+              &--2 {
+                background-position-x: -32px;
+              }
+              &--3 {
+                background-position-x: -48px;
+              }
+              &--4 {
+                background-position-x: -64px;
+              }
+              &--5 {
+                background-position-x: -80px;
+              }
+              &--6 {
+                background-position-x: -96px;
+              }
+              &--7 {
+                background-position-x: -112px;
+              }
+              &--8 {
+                background-position-x: -128px;
+              }
+              &--9 {
+                background-position-x: -144px;
+              }
+              &--10 {
+                background-position: right;
+              }
+            }
+          }
+          & .number {
+            display: inline-block;
+            vertical-align: middle;
+            font-weight: @FW-SemiBold;
+            font-size: 13px;
+            color: @C-gray;
+            width: 32px;
+            margin-left: 8px;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+  & .video-yt {
+    margin-bottom: 15px;
+    & iframe {
+      width: 100%;
+      height: 240px;
+    }
+  }
+}
+.mt-bookmakers-card__content {
+  & .company-information {
+    font-size: 0;
+    letter-spacing: -.31em;
+    padding-top: 15px;
+    &__item {
+      margin-bottom: 20px;
+      margin-right: 5%;
+      vertical-align: top;
+      width: 45%;
+      display: inline-table;
+      border-collapse: collapse;
+    }
+    &__img {
+      width: 40px;
+      display: table-cell;
+      vertical-align: top;
+      padding-right: 10px;
+      text-align: center;
+    }
+    &__desc {
+      display: table-cell;
+      vertical-align: top;
+      color: @C-textblack;
+    }
+    &__title {
+      font-size: 14px;
+      font-weight: @FW-Bold;
+      margin-bottom: 10px;
+    }
+    &__text {
+      font-size: 12px;
+      font-weight: @FW-Medium;
+      line-height: 1.5;
+      & .blue-link {
+        font-size: 12px;
+        color: @C-blue;
+        font-weight: @FW-Medium;
+        &:hover {
+          color: @C-textblack;
+        }
+      }
+    }
+  }
+}
+.mt-bookmakers-card__content {
+  & .bonuses {
+    font-size: 0;
+    letter-spacing: -.31em;
+    &__desc {
+      padding: 15px;
+    }
+    &__title {
+      display: inline-block;
+      vertical-align: top;
+      width: 32%;
+      padding-right: 10px;
+      font-size: 14px;
+      font-weight: @FW-Bold;
+      color: @C-textblack;
+    }
+    &__text {
+      display: inline-block;
+      vertical-align: top;
+      width: 68%;
+      text-align: left;
+      font-size: 13px;
+      color: @C-textblack;
+      font-weight: @FW-Medium;
+      line-height: 1.5;
+      & a {
+        color: @C-blue;
+        font-weight: @FW-Medium;
+        text-decoration: underline;
+        &:hover {
+          color: @C-textblack;
+        }
+      }
+    }
+    &__btn {
+      border-top: 1px solid @C-border;
+      text-align: center;
+      padding: 10px 0;
+    }
+  }
+}

@@ -135,3 +135,386 @@
     }
   }
 }
+.mt-bookmakersPage {
+  &__btn {
+    font-size: 0;
+    letter-spacing: -.31em;
+    position: relative;
+    & .sorting, & .filter {
+      display: inline-block;
+      width: 50%;
+      text-align: center;
+      padding: 10px;
+      font-size: 18px;
+      box-shadow: 0px 3px 6px 0px rgba(29, 29, 29, 0.15);
+      transition: .3s;
+    }
+    & .sorting {
+      background-color: @C-blue;
+      color: #FFFFFF;
+      font-weight: @FW-Medium;
+    }
+    & .filter {
+      font-weight: @FW-Bold;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      background-color: @C-gray;
+    }
+    &--filter {
+      & .mt-sidebar__filters--filter {
+        display: block;
+      }
+    }
+    &--sorting {
+      & .js-sorting {
+        background-color: @C-gray;
+      }
+      & .js-filter {
+        background-color: @C-blue;
+      }
+      & .mt-sidebar__filters--sorting {
+        display: block;
+      }
+    }
+  }
+}
+.mt-bookmakersPage {
+  font-size: 0;
+  letter-spacing: -.31em;
+  &__item {
+    &_logo {
+      width: 20%;
+      min-width: 80px;
+    }
+    &_top {
+      display: table;
+      width: 100%;
+      border-collapse: collapse;
+      &>div {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 10px;
+      }
+    }
+    &_rating {
+      text-align: right;
+      & p {
+        font-size: 26px;
+        color: #f4f4f4;
+        font-weight: @FW-SemiBold;
+        margin-bottom: 10px;
+      }
+    }
+    &_stars {
+      display: table;
+      width: 100%;
+      &--img {
+        display: inline-block;
+        vertical-align: middle;
+        background-image: url(../img/star-yellow-sprite.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 20px;
+        height: 19px;
+        overflow: hidden;
+        background-position-x: 0;
+        margin: 0 2px;
+      }
+      &--01 {
+        background-position-x: -23px;
+      }
+      &--02 {
+        background-position-x: -46px;
+      }
+      &--03 {
+        background-position-x: -70px;
+      }
+      &--04 {
+        background-position-x: -93px;
+      }
+      &--05 {
+        background-position-x: -117px;
+      }
+      &--06 {
+        background-position-x: -141px;
+      }
+      &--07 {
+        background-position-x: -164px;
+      }
+      &--08 {
+        background-position-x: -187px;
+      }
+      &--09 {
+        background-position-x: -210px;
+      }
+      &--full {
+        background-position-x: -234px;
+      }
+    }
+    &_center {
+      padding: 20px 10px;
+    }
+    &_bot {
+      padding: 20px 10px;
+      border-top: 1px solid @C-border;
+      border-bottom: 1px solid @C-border;
+    }
+    &_wrap {
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:nth-child(4n + 1) .mt-bookmakersPage__item_top {
+        background-color: #232f3f;
+        box-shadow: 0px 3px 6px 0px rgba(29, 29, 29, 0.15);
+      }
+      &:nth-child(4n + 2) .mt-bookmakersPage__item_top {
+        background-color: #363636;
+        box-shadow: 0px 3px 6px 0px rgba(29, 29, 29, 0.15);
+      }
+      &:nth-child(4n + 3) .mt-bookmakersPage__item_top {
+        background-color: #213671;
+        box-shadow: 0px 3px 6px 0px rgba(29, 29, 29, 0.15);
+      }
+      &:nth-child(4n + 4) .mt-bookmakersPage__item_top {
+        background-color: #064147;
+        box-shadow: 0px 3px 6px 0px rgba(29, 29, 29, 0.15);
+      }
+    }
+    &_title {
+      font-size: 24px;
+      font-weight: @FW-ExtraBold;
+      color: @C-textblack;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      & span {
+        color: @C-blue;
+      }
+    }
+    &_list {
+      & li {
+        position: relative;
+        padding-left: 30px;
+        color: @C-textblack;
+        font-weight: @FW-Medium;
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &::before, &::after {
+          position: absolute;
+        }
+        &::after {
+          content: '';
+          left: 0;
+          top: 3px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          border-style: solid;
+          border-width: 2px;
+        }
+        &.plus {
+          &::before {
+            content: '+';
+            left: 4px;
+            top: 1px;
+            color: @C-green;
+            font-size: 28px;
+            line-height: 1;
+            font-weight: @FW-Reg;
+          }
+          &::after {
+            border-color: @C-green;
+          }
+        }
+        &.minus {
+          &::before {
+            content: '';
+            left: 5px;
+            top: 14px;
+            background-color: @C-red;
+            width: 14px;
+            height: 2px;
+          }
+          &::after {
+            border-color: @C-red;
+          }
+        }
+      }
+    }
+    &_btn {
+      font-size: 0;
+      padding: 20px 10px;
+      & .mt-btn {
+        width: 49%;
+        text-align: center;
+        padding: 10px 5px;
+        font-size: 15px;
+        font-weight: @FW-Bold;
+        &.mt-btn__green {
+          margin-left: 2%;
+        }
+      }
+    }
+  }
+}
+.mt-sidebar__filters {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.mt-bookmakersPage__filters {
+  background-color: @C-gray;
+  & .item {
+    border-bottom: 1px solid #FFFFFF;
+    & .link {
+      display: block;
+      padding: 10px;
+      transition: .3s;
+      z-index: 1;
+      color: #FFFFFF;
+      font-weight: @FW-Medium;
+      font-size: 16px;
+      &--active {
+        color: @C-blue;
+      }
+    }
+    & .title {
+      padding: 10px;
+      position: relative;
+      cursor: pointer;
+      z-index: 1;
+      font-size: 16px;
+      color: #FFFFFF;
+      & .text {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      & .img {
+        vertical-align: middle;
+        max-width: 16px;
+        margin-right: 10px;
+      }
+      &::before {
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        line-height: 1;
+        color: @C-blue;
+        transition: .3s;
+        font-weight: @FW-Medium;
+        top: 10px;
+        font-size: 26px;
+        content: '+';
+      }
+      &--active {
+        box-shadow: 0px 2px 4px 0px rgba(29, 29, 29, 0.15);
+        &::before {
+          content: '-';
+          top: 5px;
+          font-size: 30px;
+        }
+        & + .drop {
+          display: block;
+        }
+      }
+    }
+    & .drop {
+      display: none;
+      padding: 10px 25px;
+      & .label {
+        cursor: pointer;
+        display: block;
+        margin-bottom: 18px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        & input {
+          display: none;
+          &:checked {
+            & + span {
+              color: @C-green;
+              &::before {
+                border: 1px solid @C-green;
+              }
+              &::after {
+                opacity: 1;
+              }
+            }
+          }
+        }
+        & span {
+          position: relative;
+          padding-left: 30px;
+          display: inline-block;
+          font-weight: @FW-Medium;
+          font-size: 15px;
+          color: #FFFFFF;
+          &::before, &::after {
+            content: '';
+            position: absolute;
+          }
+          &::before {
+            left: 0;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border: 1px solid @C-border;
+            border-radius: 3px;
+          }
+          &::after {
+            opacity: 0;
+            top: 3px;
+            left: 3px;
+            width: 10px;
+            height: 6px;
+            border-left: 2px solid @C-green;
+            border-bottom: 2px solid @C-green;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+    & .range {
+      &__top {
+        display: table;
+        width: 100%;
+        font-size: 0;
+      }
+      &__text {
+        vertical-align: middle;
+        display: table-cell;
+        width: 60px;
+        font-size: 15px;
+        font-weight: @FW-Medium;
+        color: #FFFFFF;
+        text-transform: uppercase;
+      }
+      &__input {
+        vertical-align: middle;
+        display: table-cell;
+        & input {
+          width: 48%;
+          border: 1px solid @C-border;
+          border-radius: 3px;
+          padding: 12px 16px;
+          font-size: 15px;
+          font-weight: @FW-Medium;
+          color: #FFFFFF;
+          &:focus {
+            border: 1px solid #FFFFFF;
+          }
+          &:last-child {
+            margin-left: 4%;
+          }
+        }
+      }
+    }
+  }
+}

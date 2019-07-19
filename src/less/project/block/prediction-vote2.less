@@ -26,7 +26,7 @@
       padding: 8px;
       color: #FFFFFF;
       font-size: 14px;
-      background-color: darken( @C-green, 10% );
+      background-color: @C-blue;
       margin-left: 6px;
     }
   }
@@ -63,10 +63,9 @@
   }
   &__terms {
     color: #FFFFFF;
-    background-color: @C-red;
-    border: 2px solid @C-red;
+    background-color: @C-border;
+    border: 2px solid @C-border;
     font-size: 14px;
-    box-shadow: 0px 4px 8px 0px rgba(237, 21, 21, 0.39);
     &:hover {
       color: @C-red;
       background-color: #FFFFFF;
@@ -102,7 +101,9 @@
       color: @C-textblack;
       font-weight: @FW-SemiBold;
       &:first-child {
-        text-align: left;
+        text-align: right;
+        color: @C-blue;
+        width: 63%;
       }
       &:last-child {
         text-align: right;
@@ -139,8 +140,8 @@
         }
       }
       & .yes {
-        background-color: @C-green;
-        border: 2px solid @C-green;
+        background-color: @C-blue;
+        border: 2px solid @C-blue;
         &:hover {
           background-color: #FFFFFF;
           color: @C-green;
@@ -166,7 +167,7 @@
           display: table-cell;
         }
         & .green {
-          color: @C-green;
+          color: @C-blue;
           text-align: left;
           & span {
             margin-left: 10px;
@@ -202,7 +203,7 @@
           left: 0;
           top: 0;
           bottom: 0;
-          background-color: @C-green;
+          background-color: @C-blue;
         }
       }
     }

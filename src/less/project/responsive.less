@@ -20,6 +20,16 @@
     display: block;
     text-align: center;
   }
+  .mt-content {
+    &__block {
+      & > p {
+        & > img {
+          width: 100%;
+          float: none;
+        }
+      }
+    }
+  }
   .mt-field {
     background-color: #ffffff;
     &__title {
@@ -208,6 +218,9 @@
       display: none;
     }
   }
+  .mt-bookmakers-card__head .bnr__title {
+    font-size: 32px;
+  }
 }
 @media (max-width: 475px) {
   .mt-field {
@@ -284,6 +297,94 @@
     & .mt-bonuses-table__terms {
       width: 100%;
     }
+  }
+  .mt-bookmakers-card__head .bnr__rating_stars {
+    & .star {
+      display: inline-block;
+      vertical-align: middle;
+      background-image: url( ../img/star-yellow-sprite.png );
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 18px;
+      height: 18px;
+      margin-right: 3px;
+      overflow: hidden;
+      &:last-child {
+        margin-right: 5px;
+      }
+      &--0 {
+        background-position: left;
+      }
+      &--1 {
+        background-position-x: -22px;
+      }
+      &--2 {
+        background-position-x: -44px;
+      }
+      &--3 {
+        background-position-x: -66px;
+      }
+      &--4 {
+        background-position-x: -89px;
+      }
+      &--5 {
+        background-position-x: -111px;
+      }
+      &--6 {
+        background-position-x: -133px;
+      }
+      &--7 {
+        background-position-x: -156px;
+      }
+      &--8 {
+        background-position-x: -178px;
+      }
+      &--9 {
+        background-position-x: -200px;
+      }
+      &--10 {
+        background-position: right;
+      }
+    }
+  }
+  .mt-bookmakers-card__head .bnr__rating_total {
+    font-size: 15px;
+  }
+  .mt-bookmakers-card__head .bnr__from .text {
+    font-size: 13px;
+  }
+  .mt-bookmakers-card__nav {
+    & .menu {
+      font-size: 0;
+      letter-spacing: -.31em;
+      padding: 0 10px;
+      & a {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 13px;
+        font-weight: @FW-Medium;
+        color: @C-blue;
+        padding: 7px 10px;
+        &:hover {
+          color: @C-textblack;
+        }
+      }
+    }
+  }
+  .mt-paymentPage__table .table__number {
+    display: none;
+  }
+  .mt-paymentPage__table .table thead tr th {
+    font-size: 12px;
+    &:first-child {
+      display: none;
+    }
+  }
+  .mt-paymentPage__table .table__btn .mt-btn {
+    font-size: 11px;
+  }
+  .mt-paymentPage__table .table__link a {
+    font-size: 13px;
   }
 }
 @media ( max-width: 460px ) {
@@ -383,6 +484,13 @@
   }
   .mt-prediction-table-rating__table tr th {
     font-size: 11px;
+  }
+  .mt-bookmakers-card__head .bnr {
+    padding: 20px 10px;
+  }
+  .mt-bookmakers-card__head .bnr__btn .mt-btn {
+    font-size: 12px;
+    padding: 10px 5px;
   }
 }
 @media ( max-width: 425px ) {
@@ -521,24 +629,6 @@
   .mt-field__table {
     font-size: 14px;
   }
-  //.mt-vote {
-  //  &__list {
-  //    display: block;
-  //    border-spacing: 0;
-  //  }
-  //  &__item {
-  //    width: 100%;
-  //    display: block;
-  //    margin-bottom: 5px;
-  //    &:last-child {
-  //      margin-bottom: 0;
-  //    }
-  //  }
-  //  &__logo {
-  //    width: 30%;
-  //    text-align: right;
-  //  }
-  //}
   .mt-bonuses-table__logo {
     & img {
       height: 75px;
@@ -580,26 +670,32 @@
       padding: 10px;
       margin-bottom: 10px;
       & .mt-btn {
-        font-size: 12px;
+        font-size: 11px;
       }
     }
     &__img {
-      width: 40px;
+      width: 30px;
+      & img {
+        width: 100%;
+      }
     }
     &__link {
       margin: 0 5px;
       & a {
         display: inline-block;
         vertical-align: middle;
-        padding: 5px;
-        font-size: 12px;
+        padding: 5px 3px;
+        font-size: 11px;
       }
     }
     &__terms {
-      font-size: 12px;
+      font-size: 11px;
     }
     &__bonus {
-      font-size: 12px;
+      font-size: 11px;
+      & img {
+        display: none;
+      }
     }
     &__statistic {
       padding: 0 10px;
@@ -612,8 +708,8 @@
       padding: 0 10px;
       &_btn {
         & a {
-          width: 49%;
-          font-size: 14px;
+          width: 48%;
+          font-size: 13px;
           padding: 8px;
         }
       }
@@ -629,6 +725,36 @@
         }
       }
     }
+  }
+  .mt-leaguePage__predictions .predictions__img {
+    display: none;
+  }
+  .mt-bookmakers-card__content .details-comment__rating_item .rating {
+    width: 60%;
+    & .stars {
+      margin-bottom: 5px;
+    }
+  }
+  .mt-bookmakers-card__content .details-comment__rating_item .title {
+    width: 40%;
+  }
+  .mt-bookmakers-card__content .details-comment__rating_item .rating .stars .star {
+    margin-right: 0;
+  }
+  .mt-bookmakers-card__content .write-comment .form__rating_item .rating {
+    width: 60%;
+    & .stars {
+      margin-bottom: 5px;
+    }
+  }
+  .mt-bookmakers-card__content .write-comment .form__rating_item .title {
+    width: 40%;
+  }
+  .mt-bookmakers-card__content .write-comment .form__rating_item .rating .stars .star {
+    margin-right: 0;
+  }
+  .mt-bookmakers-card__head .bnr__title {
+    font-size: 22px;
   }
 }
 @media (max-width: 380px) {
@@ -651,6 +777,18 @@
   }
   .mt-footer__nav_list {
     width: 150px;
+  }
+  .mt-bookmakers-card__content .panel-comments .mt-btn {
+    padding: 10px 5px;
+    font-size: 11px;
+  }
+  .mt-comments__img {
+    padding-right: 5px;
+    width: 45px;
+    & img {
+      width: 40px;
+      height: 40px;
+    }
   }
 }
 @media ( max-width: 350px ) {
