@@ -1,0 +1,57 @@
+.mt-prediction-date-page {
+  font-size: 14px;
+  color: @C-textblack;
+  & span {
+    color: #6b6b6c;
+  }
+}
+.mt-prediction-vote-rating {
+  background-color: #272d35;
+  padding: 15px 10px;
+  & .wrap__left {
+    margin-bottom: 10px;
+  }
+  & .title {
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: @FW-Bold;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  & .mt-author-articles {
+    &__stars {
+      display: inline-block;
+      width: 120px;
+      text-align: left;
+      vertical-align: middle;
+      &--img {
+        display: inline-block;
+        background-image: url(../img/star-orange-sprite.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 14px;
+        height: 14px;
+        overflow: hidden;
+        background-position: 0;
+        &:not(:last-child) {
+          margin-right: 2px;
+        }
+        &:hover {
+          background-position-x: -36px;
+          cursor: pointer;
+        }
+      }
+      &--05 {
+        background-position-x: -18px;
+      }
+      &--full {
+        background-position-x: -36px;
+      }
+    }
+  }
+  & .text {
+    color: rgba( 255, 255, 255, .8 );
+    font-size: 14px;
+  }
+}

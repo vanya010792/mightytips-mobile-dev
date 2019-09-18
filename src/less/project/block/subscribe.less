@@ -1,0 +1,63 @@
+.mt-subscribe {
+  padding: 15px 10px;
+  & .title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+    &__img {
+      flex: 0 0 60px;
+      width: 60px;
+      padding-right: 10px;
+      text-align: center;
+    }
+    &__text {
+      &--top {
+        font-size: 16px;
+        font-weight: @FW-Bold;
+        color: @C-textblack;
+        margin-bottom: 5px;
+      }
+      &--bot {
+        font-size: 12px;
+        color: @C-text-gray;
+      }
+    }
+  }
+  & .form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 41px;
+    &__input {
+      flex: 1 1 auto;
+      height: 100%;
+      & input {
+        padding: 10px;
+        width: 100%;
+        background-color: #f1f1f1;
+        height: 100%;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        font-size: 12px;
+        color: @C-blue;
+        &::-webkit-input-placeholder {
+          color: #a1a1a1;
+        }
+      }
+    }
+    &__btn {
+      flex: 0 0 115px;
+      width: 115px;
+      cursor: pointer;
+      height: 100%;
+      & .mt-btn {
+        height: 100%;
+        width: 100%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        font-size: 13px;
+      }
+    }
+  }
+}

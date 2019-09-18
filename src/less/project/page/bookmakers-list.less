@@ -185,6 +185,9 @@
     &_logo {
       width: 20%;
       min-width: 80px;
+      & img {
+        width: 100px;
+      }
     }
     &_top {
       display: table;
@@ -290,7 +293,122 @@
         color: @C-blue;
       }
     }
+    &_language {
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      & .check {
+        flex: 0 0 18px;
+        margin-right: 5px;
+        &:hover {
+          transition: .3s;
+          transform: scale(1.1);
+        }
+      }
+      & .flag {
+        flex: 0 0 20px;
+        margin-right: 5px;
+      }
+      & .text {
+        flex: 1 1 auto;
+        font-size: 13px;
+        font-weight: @FW-Bold;
+        color: @C-textblack;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    &_country {
+      margin-bottom: 15px;
+      & .country__item {
+        margin-bottom: 10px;
+        font-size: 0;
+        letter-spacing: -.31em;
+        & .check {
+          display: inline-block;
+          vertical-align: middle;
+          width: 18px;
+          margin-right: 5px;
+          &:hover {
+            transition: .3s;
+            transform: scale(1.1);
+          }
+        }
+        & .flag {
+          display: inline-block;
+          vertical-align: middle;
+          width: 20px;
+          margin-right: 5px;
+        }
+        & .text {
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 13px;
+          font-weight: @FW-Bold;
+          color: @C-textblack;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        & .link {
+          display: block;
+          font-size: 13px;
+          font-weight: @FW-Bold;
+          color: @C-blue;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    &_bonuses {
+      display: table;
+      border-collapse: collapse;
+      margin-bottom: 5px;
+      & .bonuses {
+        &__icon {
+          display: table-cell;
+          vertical-align: middle;
+          text-align: left;
+          width: 60px;
+          & img {
+            width: 45px;
+          }
+        }
+        &__desc {
+          vertical-align: middle;
+          display: table-cell;
+          text-align: left;
+        }
+        &__text {
+          font-size: 15px;
+          color: @C-textblack;
+          margin-bottom: 5px;
+          font-weight: @FW-Medium;
+          & a {
+            font-size: 15px;
+            color: @C-textblack;
+            font-weight: @FW-Bold;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        &__term {
+          display: inline-block;
+          font-size: 13px;
+          color: @C-blue;
+          cursor: pointer;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
     &_list {
+      margin-bottom: 10px;
       & li {
         position: relative;
         padding-left: 30px;
@@ -346,7 +464,7 @@
     }
     &_btn {
       font-size: 0;
-      padding: 20px 10px;
+      padding: 0 10px 20px 10px;
       & .mt-btn {
         width: 49%;
         text-align: center;

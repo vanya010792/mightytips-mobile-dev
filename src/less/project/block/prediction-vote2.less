@@ -1,97 +1,152 @@
 .mt-prediction-vote2 {
-  padding: 10px 0;
-  text-align: center;
-  background-color: #FFFFFF;
-  font-size: 0;
-  letter-spacing: -.31em;
-  &__title {
-    margin: 0 auto;
-    display: inline-block;
-    text-align: center;
-    font-size: 16px;
-    color: @C-gray2;
-    font-weight: @FW-SemiBold;
-    border-bottom: 2px solid @C-border-white;
-    text-transform: uppercase;
-    padding: 15px;
-    max-width: 600px;
-  }
-  &__coefficient {
-    padding: 15px;
-    border-bottom: 2px solid @C-border-white;
-    font-weight: @FW-SemiBold;
-    font-size: 16px;
-    text-align: center;
-    & span {
-      padding: 8px;
-      color: #FFFFFF;
-      font-size: 14px;
-      background-color: @C-blue;
-      margin-left: 6px;
+  & .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    border-bottom: 1px solid #d4d6d8;
+    & b {
+      font-weight: @FW-Medium;
+      font-size: 20px;
+      color: @C-blue;
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+    &__text {
+      font-size: 18px;
+      color: #696969;
+    }
+    &__coefficient {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0;
+      border: 2px solid #c6c8cb;
+      height: 40px;
+      &:hover {
+        border: 2px solid @C-blue;
+      }
+      &_img, &_value {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 100%;
+      }
+      &_img {
+        &--267294 {
+          background-color: #313741;
+        }
+        &--258797 {
+          background-color: #004EA0;
+        }
+        &--254291 {
+          background-color: #027C5C;
+        }
+        &--254534 {
+          background-color: #000000;
+        }
+        &--254384 {
+          background-color: #000C3C;
+        }
+        &--254367 {
+          background-color: #00AE00;
+        }
+        &--254332 {
+          background-color: #000000;
+        }
+        &--254320 {
+          background-color: #002759;
+        }
+        &--254312 {
+          background-color: darken(#FFB900, 10%);
+        }
+        &--254187 {
+          background-color: #F8F8F8;
+        }
+      }
+      &_value {
+        font-size: 18px;
+        font-weight: @FW-Medium;
+        color: @C-blue;
+      }
     }
   }
-  &__option {
-    display: table;
-    border-bottom: 2px solid @C-border-white;
-    padding: 10px 15px;
-    margin-bottom: 15px;
-    width: 100%;
+  & .calculator {
+    padding: 30px 20px 0 20px;
+    font-size: 0;
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__text {
+      height: 40px;
+      padding: 10px 15px;
+      border: 1px solid #e2e3e5;
+      font-size: 18px;
+      color: #696969;
+      & span {
+        color: #333333;
+        font-weight: @FW-Medium;
+      }
+    }
+    &__result {
+      height: 40px;
+      padding: 10px 15px;
+      font-size: 18px;
+      border: 1px solid #e2e3e5;
+      font-weight: @FW-Medium;
+      & span {
+        color: #696969;
+      }
+      & b {
+        color: @C-blue;
+        font-weight: @FW-Medium;
+      }
+    }
+    &__rate {
+      text-align: center;
+      height: 50px;
+      width: 100%;
+      max-width: 400px;
+      margin: 35px auto 0 auto;
+      & input {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        border: 1px solid #c6c8cb;
+        border-radius: 5px;
+        font-size: 18px;
+        color: #1b1b1b;
+        font-weight: @FW-Medium;
+        transition: .3s;
+        background-color: #FFFFFF;
+        &::-webkit-input-placeholder {
+          font-size: 20px;
+          color: #c2c2c2;
+          font-weight: @FW-Medium;
+        }
+        &:focus {
+          border: 1px solid @C-blue;
+        }
+      }
+    }
+  }
+  & .description {
+    text-align: center;
+    font-size: 0;
+    padding: 30px 20px;
     & .mt-btn {
-      text-align: center;
-      vertical-align: middle;
-      display: table-cell;
-      font-size: 14px;
-    }
-  }
-  &__img {
-    display: table-cell;
-    width: 60px;
-    vertical-align: middle;
-  }
-  &__link {
-    vertical-align: middle;
-    display: table-cell;
-    margin: 0 10px;
-    text-align: center;
-    & a {
-      display: inline-block;
-      vertical-align: middle;
-      padding: 15px 10px;
-      text-align: center;
-      font-size: 14px;
-    }
-  }
-  &__terms {
-    color: #FFFFFF;
-    background-color: @C-border;
-    border: 2px solid @C-border;
-    font-size: 14px;
-    &:hover {
-      color: @C-red;
-      background-color: #FFFFFF;
-    }
-  }
-  &__bonus {
-    border-top: 2px solid @C-border;
-    border-right: 2px solid @C-border;
-    border-bottom: 2px solid @C-border;
-    color: @C-textblack;
-    font-size: 14px;
-    font-weight: @FW-Medium;
-    text-transform: uppercase;
-    & img {
-      margin-bottom: 6px;
-      margin-right: 6px;
-    }
-    &:hover {
-      background-color: @C-border;
-      border-top: 2px solid @C-textblack;
-      border-right: 2px solid @C-textblack;
-      border-bottom: 2px solid @C-textblack;
+      font-size: 16px;
+      padding: 20px 40px;
+      width: 100%;
+      max-width: 400px;
     }
   }
   &__statistic {
     display: table;
+    border-collapse: collapse;
     padding: 0 15px;
     margin-bottom: 15px;
     width: 100%;
@@ -101,7 +156,6 @@
       color: @C-textblack;
       font-weight: @FW-SemiBold;
       &:first-child {
-        text-align: right;
         color: @C-blue;
         width: 63%;
       }
@@ -112,7 +166,7 @@
     }
   }
   &__votes {
-    padding: 0 15px;
+    padding: 30px 20px;
     &--active {
       & .mt-prediction-vote2__votes_btn {
         display: none;
@@ -125,13 +179,14 @@
       font-size: 0;
       & a {
         display: inline-block;
-        width: 48%;
+        text-align: center;
+        width: 40%;
         color: #FFFFFF;
         font-size: 16px;
         font-weight: @FW-Bold;
         padding: 10px;
         border-radius: 8px;
-        margin-left: 4%;
+        margin-left: 20%;
         &:first-child {
           margin-left: 0;
         }

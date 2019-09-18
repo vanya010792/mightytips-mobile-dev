@@ -1,0 +1,140 @@
+.mt-prediction-bonus {
+  position: relative;
+  overflow: hidden;
+  font-size: 0;
+  letter-spacing: -.31em;
+  & .title-block {
+    background-color: @C-gray2;
+    text-align: left;
+    padding: 10px 90px 10px 10px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  & .item {
+    padding: 15px 20px;
+    border-bottom: 1px solid @C-border;
+    text-align: center;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  & .logo {
+    & .img {
+      margin-bottom: 10px;
+      & img {
+        max-width: 200px;
+        min-width: 100px;
+      }
+    }
+    & .rating {
+      margin-bottom: 10px;
+      text-align: center;
+      &_img {
+        display: inline-block;
+        width: 86px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 14px;
+      }
+      &--0-0 {
+        background-image: url(../img/star-yellow-0.png);
+      }
+      &--0-5 {
+        background-image: url(../img/star-yellow-0-5.png);
+      }
+      &--1-0 {
+        background-image: url(../img/star-yellow-1.png);
+      }
+      &--1-5 {
+        background-image: url(../img/star-yellow-1-5.png);
+      }
+      &--2-0 {
+        background-image: url(../img/star-yellow-2.png);
+      }
+      &--2-5 {
+        background-image: url(../img/star-yellow-2-5.png);
+      }
+      &--3-0 {
+        background-image: url(../img/star-yellow-3.png);
+      }
+      &--3-5 {
+        background-image: url(../img/star-yellow-3-5.png);
+      }
+      &--4-0 {
+        background-image: url(../img/star-yellow-4.png);
+      }
+      &--4-5 {
+        background-image: url(../img/star-yellow-4-5.png);
+      }
+      &--5-0 {
+        background-image: url(../img/star-yellow-5.png);
+      }
+      &__value {
+        display: inline-block;
+        font-size: 16px;
+        color: @C-text-gray;
+        & b {
+          font-weight: @FW-Medium;
+          color: @C-textblack;
+        }
+      }
+    }
+    & .text {
+      font-size: 14px;
+      color: @C-text-gray;
+      text-decoration: underline;
+    }
+  }
+  & .desc {
+    & .title {
+      margin-bottom: 10px;
+      font-size: 30px;
+      font-weight: @FW-Bold;
+      color: @C-textblack;
+      text-transform: uppercase;
+    }
+    & .text {
+      font-size: 14px;
+      color: @C-text-gray;
+    }
+  }
+  & .link {
+    & .mt-btn {
+      width: 100%;
+      padding: 20px 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    & .text {
+      font-size: 14px;
+      color: @C-text-gray;
+      & b {
+        font-weight: @FW-Medium;
+        color: @C-textblack;
+      }
+    }
+  }
+  & .die {
+    display: inline-block;
+    font-size: 11px;
+    width: 400px;
+    font-weight: @FW-Bold;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background-color: @C-yellow;
+    padding: 10px 0;
+    text-align: center;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 30px;
+    right: -155px;
+    & p {
+      text-align: center;
+      display: inline-block;
+      max-width: 120px;
+      width: 100%;
+    }
+  }
+}

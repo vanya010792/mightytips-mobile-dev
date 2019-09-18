@@ -1,5 +1,26 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+    if( document.querySelector( '.mt-prediction-vote2 .calculator' ) ) {
+        var coefficient = document.querySelector( '.mt-prediction-vote2 .title__coefficient_value' ).dataset.value;
+        if(coefficient) {
+            var result = coefficient * 10;
+            document.querySelector( '.mt-prediction-vote2 .calculator__result_value' ).innerHTML = `$${result.toFixed(0)}`;
+
+            document.querySelector( '.mt-prediction-vote2 .calculator__rate input' ).addEventListener('input', function () {
+                var valueInp = parseInt( +this.value.replace(/\D+/g,"") );
+                if( valueInp > 1000 ) {
+                    valueInp = 1000;
+                } else if( valueInp < 1 ) {
+                    valueInp = 0;
+                }
+                this.value = `$${valueInp}`;
+                var calcResult = coefficient * valueInp;
+                document.querySelector( '.mt-prediction-vote2 .calculator__result_value' ).innerHTML = `$${calcResult.toFixed(0)}`;
+                document.querySelector( '.mt-prediction-vote2 .calculator__text span' ).innerHTML = `$${valueInp.toFixed(0)}`;
+            });
+        }
+    }
+
     document.querySelector('.js-search').addEventListener('click', function (e) {
         e.preventDefault();
         document.querySelector('.mt-popup__search').style.display = 'block';
@@ -117,13 +138,13 @@ document.addEventListener("DOMContentLoaded", function() {
                     this.parentNode.classList.add( 'mt-bookmakersPage__btn--filter' )
                 }
             })
-        jQuery( '.mt-bookmakersPage__filters .title' ).click( function () {
-            if( jQuery( this ).hasClass( 'title--active' ) ) {
-                jQuery( this ).removeClass( 'title--active' );
-            } else {
-                jQuery( this ).addClass( 'title--active' );
-            }
-        });
+        // jQuery( '.mt-bookmakersPage__filters .title' ).click( function () {
+        //     if( jQuery( this ).hasClass( 'title--active' ) ) {
+        //         jQuery( this ).removeClass( 'title--active' );
+        //     } else {
+        //         jQuery( this ).addClass( 'title--active' );
+        //     }
+        // });
     }
 
     if( document.querySelector( '.mt-content-drop' ) ) {
